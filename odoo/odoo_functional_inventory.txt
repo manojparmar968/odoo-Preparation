@@ -1,0 +1,55 @@
+# Landed Cost
+    The landed cost feature in odoo will allow you to include all the additional cost i.e purchase amount, 
+    amount of the product, shipment, insurance, custom duties, service charge, currency conversion, transportation fee etc.
+    The landed cost can be calculated based on your company specifications so, it may differ from one company to another company.
+    
+    Inventory > Settings > valuation > Landed Cost.
+
+# Batch Picking
+    Batch Picking is the process of selecting a group of products for meeting the requirement of order.
+    The order can be small batches or large batches.
+
+    Inventory > Configuration > Settings > operations > Batch Picking.
+
+# DropShipping
+    * DropShipping is method for fullfilling the order.
+    * where the product is delivered to a customer directly from the vendor's store is called DropShipping.
+
+    Inventory > Configuration > settings > Warehouse > Enable Multi Step Routes.
+    Purchase > Configuration > Settings > logistics > Enable DropShipping.
+
+# Location types
+    1. Physical Location:- is the area where one product is held in hand, its the warehouse internal site.
+        which can also be assigned to the loading & unloading location in a warehouse or shelf etc.
+
+    2. Location of Partners:- It act like a Physical location. This could be seen as the spaces in which
+        you were not the owner but stands between a seller or a customer warehouse.
+
+    3. Virtual Location:- The space or area that do not exist in reality or Physical.
+
+    Inventory > Configuration > Settings > Warehouse > Activate Storage locations.
+
+# What is the difference between reordering and replenishment in Odoo?
+    Reordering rules and replenishment are features in Odoo that help manage inventory efficiently. 
+    Reordering rules automatically generate purchase or manufacturing orders when a product's stock level drops below a certain threshold. 
+    Replenishment is a manual process that restocks products to maintain inventory levels.
+
+# Odoo Stock Removal Strategies?
+    1. First In First Out (FIFO) :- Products/Lots that were stocked first will be moved out first.
+    2. Last In First Out (LIFO) :- Products/Lots that were stocked last will be moved out first.
+    3. Closest Location :- Products/Lots with the closest to the target location will be moved out first.
+    4. First Expiry First Out (FEFO) :- Products/Lots with the closest removal date will be moved out first(The availability of this method depends on the "Expiration Dates" Settings.)
+    5. Least Packages :- FIFO but with the least number of packages possible when there are several packages containing the same product.
+
+# Consignment inventory?
+    Consignment inventory is a supply chain model where a retailer sells a supplier's product, 
+    but the supplier retains ownership until the product is sold. 
+    The retailer only pays for the items they sell, and can return any unsold items to the supplier. 
+    The supplier, or consignor, receives payment from the retailer, or consignee, based on an agreed-upon 
+    arrangement, such as a fixed fee or percentage of the sale price. 
+
+# Blanket Order?
+    A blanket order, blanket purchase agreement or call-off order is a purchase order which a customer 
+    places with its supplier to allow multiple delivery dates over a period of time, often negotiated to 
+    take advantage of predetermined pricing. It is normally used when there is a recurring need for 
+    expendable goods.

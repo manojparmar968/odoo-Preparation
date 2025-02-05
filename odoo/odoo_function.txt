@@ -1,0 +1,205 @@
+# inherit call
+    super(className,self)
+
+# inherit button
+    def action_button(self):
+        res = super(className,self).action_button()
+        return res
+
+# search()
+    The search method is used to search records with in the given model based on the domain 
+    passed as the argument.
+                OR
+    .search([]) method is used to find records that match certain conditions in the database.
+    It returns a recordset of IDs that match the domain (search criteria) provided.
+    It's useful when you want to filter records based on certain criteria and then work with them.
+    self.env['model.name'].search([('fieldName', '=', value),
+                                ('name', 'in', module_list),
+                                ('id', '!=', ()),
+                                ('id', 'not in', records.ids),
+    ], offset=0, limit=1, order=0)
+# browse()
+    Browse method is used to return a set of records for the ids passed as the parameter in the 
+    current working model.
+                        OR
+    browse() method is used to access specific records by their IDs.
+    It doesn't perform any filtering based on conditions; instead, you specify the IDs of the records you want to access.
+    It's useful when you know the exact IDs of the records you need to work with.
+    self.env['model.name'].browse(res[0] or [condition])
+
+#    Key Differences: Search() & browse()
+    1.Purpose:
+        Search: Use it when you need to filter records based on criteria.
+        Browse: Use it when you already know the IDs of the records.
+    2.Return Value:
+        Search: Returns a recordset of records matching the search criteria.
+        Browse: Returns a recordset based on a list of specific record IDs.
+    3.Performance:
+        Search: Executes a SQL query to find records that match the conditions, which can be more resource-intensive depending on the domain.
+        Browse: Simply accesses records by their ID, which is usually faster when you already know the record IDs.
+
+# filtered()
+    Filtered method returns a set of records which satisfies the function given as argument.
+    self.filtered(lambda records: records.env.user.id != vals["user_id"])
+        .filtered(lambda a: not a.reconcile)
+        .filtered(lambda r: r.code and not r.account_type)._fun()
+        .filtered(lambda line: line.journal_id == journal)\
+        .sorted('internal_index')\.mapped('internal_index')
+
+# mapped()
+    Mapped function applies the function given as an argument on all the records in the self & 
+    then returns the result as a list or record set.
+    self.mapped("company_id")
+
+# name_get()
+    name_get() function returns a list of pairs (id, text_repr) for each records and the return
+    type is a list(tuple).
+    def name_get(self):
+        return list(zip(records._ids, records.mapped('display_name')))
+        return [(record.id, record.display_name) for record in self]
+
+# _name_search()
+    _name_search is responsible for searching the specific records by some field values in 
+    relational field.
+    def _name_search(self, name, domain=None, operator='ilike', limit=None, order=None):
+        return self._search(domain, limit=limit, order=order)
+        return super()._name_search(name, domain, operator, limit, order)
+
+# search_read()
+    search_read will return the list of dictionary containing the values of fields.
+    request.env['model.name'].search_read([], ['name'])
+    .search_read([],[])
+    self.env[model_name].search_read([], ['create_uid'])
+
+# search_get() 
+    Method is primarily designed to work with many2one fields or in scenarios where you want to customize 
+    the dropdown or search functionality for a field.
+    search_get(domain=[], fields=['name'], context=None, limit=80, name_search=True)
+
+# sort()
+    value.sort(key=lambda x: x['sort_weight'])
+    value.sort(key=lambda k: (k['all_reached'], k['total_completeness']), reverse=True)
+    value.sort(key=lambda values: values['user_id'][0] != self.env.user.id if values['user_id'] else -1)
+
+# sorted()
+    sorted method returns the records inside the self, ordered by the key passed as the argument.
+    if reverse is set True, returns the result in reverse order.
+    .sorted(lambda m: (m.date, m.ref or '', m.id))
+    .sorted(lambda x: x.invoice_date_due or x.date)
+    .sorted('date_start', reverse=True)
+
+# context
+    Context is used to pass parameter across the method calls from xml to python many of odoo method 
+    change their value based on the keys inside the context.
+    <filter string="" name="" context="{'':''}"/> # Filter
+    <field string="" name="" context="{'':''}"/> # fields
+    <field name="context">{}</field> # model="ir.actions.act_window"
+
+    Note:- Python dictionary is used to pass the data & frozenDict (immutable)
+
+# with_context()
+    .with_context() helps to send some extra context along with current environment. 
+    You can use .with_context() with ORM methods like search(), browse(), read().
+    is used to add or update keys of the context.
+                    OR                      
+    This method generates a new recordset with an additional context.
+    self.with_context(force_delete=True)
+    self.env['product.product'].with_context(warehouse=self.warehouse_id.id)
+    product.with_context('location' : location_id).qty_available # this will return quantity on specific location
+
+# context manager
+    Allow you to allocate & release resources precisely when you want to.
+
+#  Assert functions
+    Assert functions are used to check whether the operation's output is True or False.
+
+# fields_views_get 
+    fields_views_get has been renamed to get_view in Odoo 16.
+    This method returns the fields_views of given views, along with the fields of the current model, 
+    and optionally its filters for the given action.
+    It returns the dictinory.
+
+# default_get()
+    default_get method collect the default values for all the fields when creating a new record.
+    def default_get(self, default_fields):
+        res = super(ClassName, self).default_get(fields)
+        return res
+        contextual_self = self.with_context(default_name=default_name, default_code=default_code) # pass you need in placeof self
+        return super(ClassName, self).default_get(default_fields)
+
+# Extension inheritance
+    Extension inheritance we will only use the _inherit attribute & do not use _name attribute.
+    _inherit = ['account.move']
+
+# Delegation inheritance
+    Delegation inheritance we use _inherits attribute, this type of inheritance is used if you want
+    to sink another model to your current model without affecting the views.
+    _name = "account.payment"
+    _inherits = {'account.move': 'move_id'}
+    move_id = fields.Many2one(comodel_name='account.move')
+
+# with_user(user)
+    If the user is not the superuser, return a new version of this recordset connected to the 
+    specified in non-superuser mode.
+
+# with_company(company)
+    Return a new instance of this recordset with altered context, such that:
+    result.env.company = company
+    result.env.companies = self.env.companies | company
+
+
+
+# What is difference between write and update in Odoo?
+    in write method, all the record has been updated of model and in update method, 
+    only particular filed of record you can update. 
+
+# 2 types of Button Call
+    1. object type that call python function
+        name="button_action_"
+    2. action type that call action from xml file
+        name="%(button_action_)d"
+
+# record set we get number of ids for given domain
+# search read will give dict.
+
+# copy=False
+    If you put copy=False to a field, When you duplicate a record, 
+    That value is not copied to duplicating (Newly created)record.
+
+# ondelete='cascade'
+    If you put this to a Many2one field, the deletion of record will cause to deletion of one2one records according to that record.
+    Eg:
+    When you delete a Sale Order, It will delete sale order lines also.
+
+# Index=True
+    You can speed the database search performance. However, you should be careful not to add indexes on too many fields because the size of the database can rapidly increase. 
+    Which means, you should carefully detect the most searchable fields and to create indexes for them only.
+
+# _auto = False: 
+    with _auto = False on the model to don't trigger the database table creation for the model,
+    but we can not use in TransientModel.
+
+# Inverse: 
+    The inverse function is mainly used to make the compute field editable. 
+    A user can’t change a compute field value.
+    An inverse function can be used to solve this problem.
+    This inverse function can be given along with the compute function.
+
+# computed fields and onchanges -:
+    both computed fields and onchanges may be used to achieve the same result. 
+    Always prefer computed fields since they are also triggered outside of the context of a form view. 
+    Never ever use an onchange to add business logic to your model. 
+    This is a very bad idea since onchanges are not automatically triggered when creating a record programmatically; they are only triggered in the form view.
+
+    When computed fields depend on other computed fields, changing a value can trigger a large number of recomputations. This leads to poor performance.
+
+# _ :-
+    note that our method name isn’t prefixed with an underscore (_). This makes our method a public method,
+    which can be called directly from the Odoo interface (through an RPC call). 
+    Until now, all methods we created (compute, onchange) were called internally, 
+    so we used private methods prefixed by an underscore. 
+    You should always define your methods as private unless they need to be called from the user interface.
+
+    Always assume that a method can be called on multiple records; it’s better for reusability.
+    Finally, a public method should always return something so that it can be called through XML-RPC. 
+    When in doubt, just return True.

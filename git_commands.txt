@@ -1,0 +1,8 @@
+# Git Commands
+    When Remove folder from git not from local
+        git rm --cached -r folderName
+    When remove folder from both git & local
+        git rm -r folderName/FileName
+        git commit -m "module is removed not in use"
+        git push origin branch name
+    sudo rm -rf

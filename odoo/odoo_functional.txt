@@ -1,0 +1,33 @@
+# Create basic module by cmd
+    ./odoo-bin scaffold module_name ../addons_path
+
+# /web/database/selector
+
+
+
+
+
+5.Deffered income and Deffered expense?
+    Deferred revenue is money a company receives before it provides goods or services, 
+    while deferred expenses are costs a company pays that aren't recorded until later. 
+    Deferred revenue is also known as unearned revenue. 
+
+    Examples of deferred revenue include:
+        Rent payments received in advance.
+        Annual subscription payments received at the beginning of the year 
+
+    Examples of deferred expenses include:
+        Prepaid expenses, such as a company paying for a year-long billboard advertisement
+        Exceptional losses, such as damages due to a major earthquake
+
+6.What is Agile methodology?
+    Agile methodology is a project management framework that breaks projects down into several dynamic phases, 
+    commonly known as sprints. 
+    The Agile framework is an iterative methodology. After every sprint, teams reflect and look back to see 
+    if there was anything that could be improved so they can adjust their strategy for the next sprint.
+        a. Plan
+        b. Design
+        c. Develop
+        d. Test
+        e. Deploy
+        f. Review
