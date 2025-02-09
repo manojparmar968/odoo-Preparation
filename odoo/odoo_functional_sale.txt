@@ -1,0 +1,4 @@
+# Pricelist/Basic Price
+    If you working on a quatation & want to provide a specific price to a particular customer, you can change
+    the unit price from orderline in that quatation but it won't change the original sale price of the product
+    that you have defined during the product creation.

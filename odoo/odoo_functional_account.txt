@@ -1,0 +1,7 @@
+# Fiscal position
+    enable us to create a bunch of rules to change taxes & accounts used by a transaction automatically.
+    They can apply automatically, depending rules & added manually.
+
+    Accounting > Configuration > Accounting > Fiscal Position.
+
+#

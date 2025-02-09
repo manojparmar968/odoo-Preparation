@@ -3,7 +3,8 @@
 
 # /web/database/selector
 
-
+# which library to connect postgres in python.
+    psycopg2 or psycopg2-binary
 
 
 

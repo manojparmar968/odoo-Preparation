@@ -29,6 +29,13 @@
 
     Inventory > Configuration > Settings > Warehouse > Activate Storage locations.
 
+# Scrap order
+    Scrap is something that is waste.
+
+# Scrap Location
+    The Location where the scraped product will be stored. we can find that the virtual location has been
+    added as the default scrap location.
+
 # What is the difference between reordering and replenishment in Odoo?
     Reordering rules and replenishment are features in Odoo that help manage inventory efficiently. 
     Reordering rules automatically generate purchase or manufacturing orders when a product's stock level drops below a certain threshold. 
