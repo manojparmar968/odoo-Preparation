@@ -2,11 +2,20 @@
     ./odoo-bin scaffold module_name ../addons_path
 
 # /web/database/selector
+# python odoo-bin -c basic.conf --xmlrpc-port=8017 --save
+# "args": ["-cD:\\odoo18\\basic\\odoo\\baic18.conf","-d","18"],
+# "args": ["-cD:\\odoo18\\basic\\odoo\\baic18.conf","-u","estate","-d","18"],
 
 # which library to connect postgres in python.
     psycopg2 or psycopg2-binary
 
+# res.partner: 
+    a partner is a physical or legal entity. It can be a company, an individual or even a contact address.
 
+# res.users: 
+    the users of the system. Users can be ‘internal’, i.e. they have access to the Odoo backend. 
+    Or they can be ‘portal’, i.e. they cannot access the backend, only the frontend 
+    (e.g. to access their previous orders in eCommerce).
 
 5.Deffered income and Deffered expense?
     Deferred revenue is money a company receives before it provides goods or services, 

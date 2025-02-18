@@ -1,0 +1,4 @@
+# self is a collection.
+    e.g. len(self) and iter(self)
+
+# (_) This makes our method a public method.
