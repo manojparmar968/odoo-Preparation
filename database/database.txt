@@ -68,15 +68,21 @@ server to find and retrieve specific rows much faster.
     EXPLAIN SELECT *
 
 4. Primary Key --> Constrains uniquely identifies each record in a table. Primary key must contains
-unique values & can not contains NULL values.
+    unique values & can not contains NULL values.
 
 5. unique Key --> The unique Constraint ensures that all values in a column are different.
-Both Primary key & unique key Constraints provide uniqueness for a column or set of columns.
+    Both Primary key & unique key Constraints provide uniqueness for a column or set of columns.
 
 6. Foreign Key --> is a field in one table that refers to the primary key in another table.
 
 7. ACID Properties
-    Atomic -->
+    1. Atomic --> A transaction is a logical unit of work which must be either completed with all of its
+        data modifications or none of them performed.
+    2. Consistent --> At the end of the transaction all data must be left in a consistent state.
+    3. Isolated --> Modifications of data performed by a transaction must be independent of another
+        transaction unless this happens, the outcome of a transaction may be errorness.
+    4. Durability --> When the transaction is completed effects of the modifications performed by the
+        transaction must be permanent in the system.
 
 Steps: Restore DB by cmd
     1. Login postgres : sudo su postgres 

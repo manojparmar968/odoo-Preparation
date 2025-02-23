@@ -8,7 +8,7 @@
 
 3. dynamically typed --> means that type of the variable is determined only during runtime.
 
-4. sotrong typed --> means that variable do have a type & that type matters when performing 
+4. strong typed --> means that variable do have a type & that type matters when performing 
     operations on a variable.
 
 5. diff b/w array and list --> array & list in python have the same way of storing data, but arrays
@@ -96,8 +96,113 @@
 23. decorators --> is used to add functionality to an existing code this is called meta programing
     because a part of the program tries to modify another part of the program at compile time.
 
-24. sets --> 
+24. sets --> is a collection which is unordered & unindexed or unchangeable. sets are written curly brackets.
+    1. Duplicate not allowed.
+    2. Store multiple item in single variable.
+    3. Slicing is not done in sets.
 
-25. oops concepts
+25. Frozen Set --> is an immutable version of python set while elements of set can be modified but frozen set
+    remains same after creation.
+    Frozen set can take single parameter iterable can be set, dictionary & tuple.
 
-26. list compreshension
+26. Primitive Data Structure -->
+    1. Integers
+    2. Flaot
+    3. string
+    4. Boolean
+
+27. Non Primitive Data Structure/Python Data Structure -->
+    1. Array
+    2. List
+    3. Tuple
+    4. dictionary
+    5. sets
+    6. Files
+
+28. oops concepts -->
+    1. Inheritance --> Child class inherit the parent class.
+    2. Polymorphism --> means one name many forms. Two types
+        a. Static --> Overloading
+        b. Dynamic --> Overriding
+        Overloading --> occurs when two or more methods in one class have the same method name but different
+            parameters.
+        Overriding --> means having two methods with the same method name & parameters.
+    3. Data Abstraction --> means a concept or idea which is not associated with any particular instance.
+    4. Encapsulation --> Hiding of data implementation by restricting access to public methods.
+
+29. list compreshension --> offers a shorter syntax. when you want to create a new list based on the values
+    of an existing list.
+    example:
+        f = ['apple', 'banana', 'cherray']
+        print([x for x in f if 'a' in x])
+
+30. for loop --> is used for iterating over a sequence.
+
+31. Switch Case --> that allow you control the flow of your program.
+
+32. Pass --> is a null statement, the Interpreter does not ignore a pass statement, but nothing happens & the
+    statement result into no operations.
+    The pass statement is useful when you don't write the implementation of a function but you want to implement
+    it in the future.
+
+33. Continue --> keyword is used to end the current iteration in for loop or while loop & continues to the
+    next iteration.
+
+34. Diff B/W Comment & Pass --> Interpreter ignores a comment entirely but pass is not ignored.
+
+35. try block --> lets you test a block of code for error.
+36. except block --> lets you handle the error.
+37. finally block --> lets you execute code, regardless of the result of the try & except block.
+
+38. Compiler -->
+    1. Compiler takes the entire program in one go.
+    2. it is faster.
+    3. it consumes less time.
+    4. it is more efficient.
+    5. it generate an intermediate machine code.
+
+39. Interpreter -->
+    1. Interpreter takes a single line of code at a time.
+    2. It is slower
+    3. It consumes more time.
+    4. less efficient.
+    5. never produces any intermediate code.
+
+40. Recursive --> function that calls itself is said to be Recursive.
+
+41. Recursion --> function calls itself directly or indirectly.
+
+42. Assert --> keyword is used when debugging code.
+    The Assert keyword lets you test if a condition in your code returns True, if not the program will 
+    raise an AssertionError.
+
+43. Global Interpreter Lock (GIL)
+
+44. monkey patching --> you can modify a class or module at run-time.
+
+Python Constraints -->
+Python Constant -->
+Protected Members -->
+
+Strip() --> method is used to remove the white space from begining & at the end of the string.
+
+abs() --> function return the absolute value.
+    The absolute value of any number is always positive it removes the negative sign of a number.
+
+any() --> function return true, if any item in an iterable are true, otherwise return false or if iterable
+    object is empty it return false.
+
+all() --> function return true if all items in an iterable are true, otherwise it return false or if
+    iterable object is empty it return True.
+Note:- any() & all() function can only work for list, tuple & dictionary.
+
+nums = [2, 3, 1, 5, 6, 4, 0]
+sort() -->
+    1. sort will sort the list in-place, mutating its indexes & return None.
+    2. sort is a method of the list class & can only be used with list.
+    3. print(nums.sort()) # sort() will returns a None, used with only list methods.
+
+sorted() -->
+    1. Sorted will return a new sorted list leaving the original list unchanged.
+    2. sorted accepts any iterable.
+    3. print(sorted(nums)) # sorted() will returns a list
