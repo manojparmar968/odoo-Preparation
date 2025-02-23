@@ -1,4 +1,19 @@
+# workflow of the sales module
+    1. Lead generation --> capture their information as leads.
+    2. Quotation -->  Create a quotation for the customer
+    3. Sales order --> Convert the quotation into a sales order once the customer confirms the purchase.
+    4. Delivery --> Deliver the products to the customer
+    5. Invoicing --> Generate an invoice based on the sales order.
+    6. Payment --> Register the payment received from the customer, reconciling it with the invoice.
+
 # Pricelist/Basic Price
     If you working on a quatation & want to provide a specific price to a particular customer, you can change
     the unit price from orderline in that quatation but it won't change the original sale price of the product
     that you have defined during the product creation.
+
+# Multiple Pricing 
+    Which is the least complicated pricing feature & volume pricing.
+    which means you can sell the product at different quantities & depending upon the quantity, you get a 
+    different price which you can apply seasonally or to a single customer.
+
+    Sales > settings > Multiple Sales Price.

@@ -60,3 +60,12 @@
     places with its supplier to allow multiple delivery dates over a period of time, often negotiated to 
     take advantage of predetermined pricing. It is normally used when there is a recurring need for 
     expendable goods.
+
+# Define routes: Create routes to define the paths that goods take through your warehouse and supply chain.
+
+# configure inventory settings
+    1. Define products
+    2. Set up warehouses
+    3. Configure inventory valuation --> FIFO, LIFO, 
+    4. Define routes -->  Create routes to define the paths that goods take through your warehouse and supply chain.
+    5. Configure shipping methods

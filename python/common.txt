@@ -2,3 +2,6 @@
     e.g. len(self) and iter(self)
 
 # (_) This makes our method a public method.
+
+# which library to connect Postgres in python.
+    psycopg2 OR psycopg2-binary

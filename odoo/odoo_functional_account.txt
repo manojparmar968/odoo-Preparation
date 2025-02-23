@@ -4,4 +4,6 @@
 
     Accounting > Configuration > Accounting > Fiscal Position.
 
-#
+# reconciling/Bank reconciliation
+    Bank reconciliation is the process of matching your bank transactions with your business records, 
+    such as customer invoices, vendor bills, and payments.

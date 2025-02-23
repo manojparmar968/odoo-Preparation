@@ -6,6 +6,11 @@
         res = super(className,self).action_button()
         return res
 
+# ORM(Object Relational Maping)
+    1. ORM maps models to database tables.
+    2. ORM also creates database tables for models in application.
+    3. ORM performs DML (Data Manipulation Language) operations using simple methods without writing SQL commands.
+
 # search()
     The search method is used to search records with in the given model based on the domain 
     passed as the argument.
@@ -18,6 +23,10 @@
                                 ('id', '!=', ()),
                                 ('id', 'not in', records.ids),
     ], offset=0, limit=1, order=0)
+
+# search_count() --> method returns the number of records or matching records in the database.
+    self.env[''].search_count([])
+
 # browse()
     Browse method is used to return a set of records for the ids passed as the parameter in the 
     current working model.
@@ -127,16 +136,7 @@
         contextual_self = self.with_context(default_name=default_name, default_code=default_code) # pass you need in placeof self
         return super(ClassName, self).default_get(default_fields)
 
-# Extension inheritance
-    Extension inheritance we will only use the _inherit attribute & do not use _name attribute.
-    _inherit = ['account.move']
 
-# Delegation inheritance
-    Delegation inheritance we use _inherits attribute, this type of inheritance is used if you want
-    to sink another model to your current model without affecting the views.
-    _name = "account.payment"
-    _inherits = {'account.move': 'move_id'}
-    move_id = fields.Many2one(comodel_name='account.move')
 
 # with_user(user)
     If the user is not the superuser, return a new version of this recordset connected to the 

@@ -9,6 +9,33 @@
 # which library to connect postgres in python.
     psycopg2 or psycopg2-binary
 
+# Different types of inheritance in odoo
+    1. Classical Inheritance --> The initial type of inheritance is the classic inheritance where we use
+        both _name & _inherit attributes together.
+        _name = ''
+        _inherit = ''
+
+    2. Extension inheritance
+        Extension inheritance we will only use the _inherit attribute & do not use _name attribute.
+        _inherit = ['account.move']
+
+    3. Delegation inheritance
+        Delegation inheritance we use _inherits attribute, this type of inheritance is used if you want
+        to sink another model to your current model without affecting the views.
+        _name = "account.payment"
+        _inherits = {'account.move': 'move_id'}
+        move_id = fields.Many2one(comodel_name='account.move')
+
+# Odoo Architecture --> odoo follows a multitier Architecture.
+    1. Presentation tier --> The top most level of the application is the user interface.
+        The main function of the interface is to transalate task & result to something the user can understand.
+    
+    2. Logic tier --> This layer coordinates the application, processes commands, make logical decisions &
+        evaluations & performs calculations. It also moves & process data between the two surrounding layers.
+    
+    3. Data tier --> Here information is stored & retrieved from a database or file system. The information 
+        is back to logic tier for processing & then back to user.
+
 # res.partner: 
     a partner is a physical or legal entity. It can be a company, an individual or even a contact address.
 
