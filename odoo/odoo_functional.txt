@@ -3,11 +3,26 @@
 
 # /web/database/selector
 # python odoo-bin -c basic.conf --xmlrpc-port=8017 --save
-# "args": ["-cD:\\odoo18\\basic\\odoo\\baic18.conf","-d","18"],
-# "args": ["-cD:\\odoo18\\basic\\odoo\\baic18.conf","-u","estate","-d","18"],
+# "args": ["-cD:\\odoo18\\basic\\odoo\\baic18.conf","-d","database name"],
+# "args": ["-cD:\\odoo18\\basic\\odoo\\baic18.conf","-u","module name","-d","database name"],
 
 # which library to connect postgres in python.
     psycopg2 or psycopg2-binary
+
+# View --> Define how records should be display to end-user. They exist various types-
+    1. tree/list         2. form                3. Kanban               4. search
+    5. qweb              6. calender            7. dashboard            8. gantt
+    9. pivot             10. graph              11. map                 12. cohort
+
+# Types of model in odoo
+    1. 
+    2. models.model
+    3.
+
+# wizard -->
+    1. wizard models are not stored in a database.
+    2. Records are created temporary & removed when operations are finished.
+    3. Transient model is used for them.
 
 # Different types of inheritance in odoo
     1. Classical Inheritance --> The initial type of inheritance is the classic inheritance where we use
@@ -36,13 +51,149 @@
     3. Data tier --> Here information is stored & retrieved from a database or file system. The information 
         is back to logic tier for processing & then back to user.
 
+# Different types of actions in odoo
+    1. server Actions (ir.actions.server)
+    2. window Actions (ir.actions.act_window)
+    3. URL Actions (ir.actions.act_url)
+    4. Client Actions (ir.actions.client)
+    5. Report Actions (ir.actions.report)
+    6. Automated Actions (ir.cron)
+
+# Onchange
+    is triggered only when one of the given attributes changes its value.
+
+# compute method
+    should assign a value to the computed field therefore, it is necessary to ensure that the 
+    compute method will asign a value to the field on every condition.
+    Note:-
+        1. It should specify those fields using @api.depends('value1', 'value2').
+        2. Compute Field are not stored by defult.
+        3. To store field in database use store = True.
+        4. Compute field are readonly by default.
+        5. 
+
+# Inverse: 
+    The inverse function is mainly used to make the compute field editable. 
+    A user can’t change a compute field value.
+    An inverse function can be used to solve this problem.
+    This inverse function can be given along with the compute function.
+
+# computed fields and onchanges -:
+    both computed fields and onchanges may be used to achieve the same result. 
+    Always prefer computed fields since they are also triggered outside of the context of a form view. 
+    Never ever use an onchange to add business logic to your model. 
+    This is a very bad idea since onchanges are not automatically triggered when creating a record 
+    programmatically; they are only triggered in the form view.
+
+    When computed fields depend on other computed fields, changing a value can trigger a large number of 
+    recomputations. This leads to poor performance.
+
+# _ :-
+    note that our method name isn’t prefixed with an underscore (_). This makes our method a public method,
+    which can be called directly from the Odoo interface (through an RPC call). 
+    Until now, all methods we created (compute, onchange) were called internally, 
+    so we used private methods prefixed by an underscore. 
+    You should always define your methods as private unless they need to be called from the user interface.
+
+    Always assume that a method can be called on multiple records; it’s better for reusability.
+    Finally, a public method should always return something so that it can be called through XML-RPC. 
+    When in doubt, just return True.
+
+# ref in odoo --> returns the record corresponding to an xml id.
+    self.env.ref('module_name.xml external id').id
+
+# Record Rule --> are set to determine who can access the object according to the rule.
+    we have 4 access modes for the object.
+    1. create --> Access to create records in the object.
+    2. write (edit) --> Access to write records in the object.
+    3. Read (view only) --> Access to read records in object.
+    4. delete --> Delete access to delete object.
+
+# qweb Report --> Qweb is a reporting engine or template engine used by odoo, by using this we can create
+    reports in odoo. It uses xml to create design reports as per your need.
+    The PDF rendering itself is performed by WKHTML to pdf.
+
+# Relationship/Relational Field --> are used to link one model to another model.
+    1. Many2one field --> is used to link current object to another object which acts as a parent for this
+        object.
+        Note:-
+            1. Many2one is a Foreign key (int).
+            2. Many2one will store in database.
+            3. _id
+        Example:-
+            Class SaleOrderLine(models.model):
+                _name = 'sale.order.line'
+                order_id = fields.Many2one('sale.order', string = 'order Ref')
+
+    2. One2Many --> can be used in case where the user want to store multiple records of the parent model
+        & create a connection b/w those records & the current record through an inverse Many2one field.
+        Note:-
+            1. One2Many will not store in database.
+            2. One2Many is logical field there is no effect in database.
+            3. _ids
+        Example:-
+            Class SaleOrder(models.model):
+                _name = 'sale.order'
+                order_line_ids = fields.One2Many('sale.order', inverse_name = 'order_id', string='order line')
+
+    3. Many2Many --> is used to create bidirectional multiple relationship b/w two different model.
+        Note:-
+            1. One2Many will not store in database.
+            2. _ids
+        Example:-
+
+# comodel --> It is the name of the target model to which we want to create the relational field.
+
+# Related field --> A special case of compute field are related field. Which provide the value of a 
+    sub-field on the current record.
+    Note:-
+        1. Not Stored in database
+        2. Not copied
+        3. readonly
+
+# Difference between SQL Constraints & Python Constraints
+    SQL Constraints --> are usually more efficient than python conditions.
+
+    Python Constraints --> 
+        @api.Constraints('value1', 'value2')
+
+    Note:-  When performance matters always use sql Constraints.
+
 # res.partner: 
     a partner is a physical or legal entity. It can be a company, an individual or even a contact address.
+
+# with_user(user)
+    If the user is not the superuser, return a new version of this recordset connected to the 
+    specified in non-superuser mode.
+
+# with_company(company)
+    Return a new instance of this recordset with altered context, such that:
+    result.env.company = company
+    result.env.companies = self.env.companies | company
 
 # res.users: 
     the users of the system. Users can be ‘internal’, i.e. they have access to the Odoo backend. 
     Or they can be ‘portal’, i.e. they cannot access the backend, only the frontend 
     (e.g. to access their previous orders in eCommerce).
+
+# copy=False
+    If you put copy=False to a field, When you duplicate a record, 
+    That value is not copied to duplicating (Newly created)record.
+
+# ondelete='cascade'
+    If you put this to a Many2one field, the deletion of record will cause to deletion of 
+    one2one records according to that record.
+    Eg:
+    When you delete a Sale Order, It will delete sale order lines also.
+
+# Index=True
+    You can speed the database search performance. However, you should be careful not to add indexes on 
+    too many fields because the size of the database can rapidly increase. 
+    Which means, you should carefully detect the most searchable fields and to create indexes for them only.
+
+# _auto = False: 
+    with _auto = False on the model to don't trigger the database table creation for the model,
+    but we can not use in TransientModel.
 
 5.Deffered income and Deffered expense?
     Deferred revenue is money a company receives before it provides goods or services, 
@@ -68,3 +219,24 @@
         d. Test
         e. Deploy
         f. Review
+
+# @api.multi --> self will be the current recordset without iteration.
+    Note:-
+        1. From odoo 13 onwards @api.multi & @api.one are not used.
+        2. You can remove @api.multi from the code, the function will work.
+        3. To remove the singleton error, you can loop inside the function using for loop.
+
+@api.model --> This decorator will convert old API calls to decorated function to new API signature.
+    It allow to be polite when migrating code.
+
+@api.depends('value') --> If any of field in the decorator is altered by ORM or changed in the form.
+    @api.depends('value', 'value2')
+    def _compute_(self):
+
+@api.onchange('value') --> is triggered only when one of the given attributes changes its value.
+    @api.onchange('value')
+    def _onchange_(self):
+
+@api.constrains('value1', 'value2') --> 
+    1. are used in python code or we called python Constraints.
+    2. When you need to validate some data before to be called create, write & unlink.

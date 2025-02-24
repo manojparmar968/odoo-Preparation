@@ -1,3 +1,8 @@
+# Types of Products
+    1. consumable --> user don't want to manage the inventory.
+    2. service --> are also considered as a product, but user can't keep stock of a service.
+    3. storable --> The product which is managed with inventory.
+
 # Landed Cost
     The landed cost feature in odoo will allow you to include all the additional cost i.e purchase amount, 
     amount of the product, shipment, insurance, custom duties, service charge, currency conversion, transportation fee etc.
@@ -35,6 +40,21 @@
 # Scrap Location
     The Location where the scraped product will be stored. we can find that the virtual location has been
     added as the default scrap location.
+
+# inventory valuation --> The main aim of inventory valuation is to find revenue.
+
+# forecasted quantity -->
+    forecasted quantity = onhand quantity - outgoing shipment + incoming shipment.
+
+# Inventory operations
+    1. Recipts
+    2. Internal transfers
+    3. Pick
+    4. Delivery Order
+    5. manufacturing 
+    6. POS Orders
+    7. DropShipping
+    8. Sub Contractor
 
 # What is the difference between reordering and replenishment in Odoo?
     Reordering rules and replenishment are features in Odoo that help manage inventory efficiently. 
