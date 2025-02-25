@@ -3,3 +3,10 @@ dict1 = {'India': 2, 'Us': 1, 'Uk': 3}
 
 2. count the frequency of each element in a list.
 nums = [1, 2, 3, 2, 1, 3, 2, 4, 5, 4]
+
+3. count and remove duplicates from list and then convert list to dictinory.
+l = [11,22,11,30,8,35,8,8,22]
+n=[5,2,1,4,3,2,8,4,2,1,2,0]
+
+4. convert list to dictinory.
+t=['a','b','b','a','c','b']

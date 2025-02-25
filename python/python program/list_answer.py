@@ -31,6 +31,10 @@ for i in range(index):
     for j in range(index-i):
         if n[j] < n[j+1]: # Descending order
             n[j],n[j+1] = n[j+1],n[j]
+# Note:-
+nums = [2, 3, 1, 5, 6, 4, 0]
+print(sorted(nums)) # sorted() will returns a list
+print(nums.sort()) # sort() will returns a None, used with only list methods.
 
 # 4. count a total number in n = 123654
 n = 123654
@@ -134,41 +138,101 @@ print((list(set(s))))
 
 # 12. Remove repeated number from list and count a number how many times apper.
 n=[5,2,1,4,3,2,8,4,2,1,2,0]
-count = 0
-c = []
-l=[]
+c = 0
+count_list = []
+unique_list = []
 for i  in range(len(n)):
-    if n[i] not in l:
-        l.append(n[i])
-        count = n.count(n[i])
-        c.append(count)
+    if n[i] not in unique_list:
+        unique_list.append(n[i])
+        c = n.count(n[i])
+        count_list.append(c)
+print(unique_list)
+print(count_list)
 
+# 13. l = [11,22,11,30,8,35,8,8,22] count and remove duplicates from list.
+# count and remove duplicates from list and then convert list to dictinory.
+l = [11,22,11,30,8,35,8,8,22]
+d = {}
+unique_list = []
+common_list = []
+c = 0
+for i in l:
+  if i not in unique_list:
+    unique_list.append(i)
+    c = l.count(i)
+    common_list.append(c)
+print(unique_list,common_list)
+for key in unique_list:
+  for value in common_list:
+    d[key] = value
+    common_list.remove(value)
+    break
+print(str(d))
 
-nums = [2, 3, 1, 5, 6, 4, 0]
-print(sorted(nums)) # sorted() will returns a list
-print(nums.sort()) # sort() will returns a None, used with only list methods.
+# 14. l=['a','b','b','a','c','b'] convert list to dictinory.
+t=['a','b','b','a','c','b']
 
-# Middle Element in a List
+dd = {}
+for x in t:
+    if x in dd:
+      dd[x] += 1
+    else:
+      dd[x] = 1
+print(dd)
+
+# 15. remove duplicates from a list.nums = [1, 2, 3, 2, 1, 3, 2, 4, 5, 4]
+
+# 16. l = [11,22,30,8,35] #if > 20 -1, < 20 -2 using list comphersion. o/p = [9, 21, 29, 6, 34]
+l = [11,22,30,8,35] #if > 20 -1, < 20 -2
+print([x-1 if x > 20 else x-2 for x in l])
+
+# 17. lst = [1, 2, 3, 4, 5] reverse a list, without any built in function or slicing.
+lst = [1, 2, 3, 4, 5]
+# reverse a list, without any built in function or slicing.
+r_list = []
+for value in lst:
+    r_list = [value] + r_list
+print("List after reverse : ", r_list)
+
+# Reverse build in method using method
+print(lst[::-1])
+
+# 18. n = 123456 Reverse a number & Reverse a string s = 'Manoj'
+n = 123456 # Reverse a number
+rev = 0
+while (n>0):
+  a = n % 10
+  rev = rev * 10 + a
+  n = n//10
+print("rev: ",rev)
+
+s = "manoj" # Reverse a string
+r = ''
+for i in s:
+  r = i + r
+print(r)
+print(s[::-1])
+
+# 19. Middle Element in a List. numList = [1, 2, 3, 4, 5,6,7]
 numList = [1, 2, 3, 4, 5,6,7]
 midElement = int((len(numList)/2)) 
 print(numList[midElement])
 
-# Counting the occurrences of elements in the list
+# 20. Counting the occurrences of elements in the list. days = ['S','M','M','M','F','S']
 days = ['S','M','M','M','F','S']
 y = set(days)
 print([[i,days.count(i)] for i in y])
 
-# Find Missing Number in an Array
+# 21. Find Missing Number, n = [1, 2, 3, 5, 6, 7, 8, 9,10,11,13,14,16]
 n = [1, 2, 3, 5, 6, 7, 8, 9,10,11,13,14,16]
 num = set(n)
 op = []
-
 for i in range(1, n[-1]):
     if i not in num:
         op.append(i)
 print(op)
 
-# Find Duplicate Number in an Array
+# 22. Find Duplicate Number in an Array, lis = [1, 2, 2, 3, 4, 4, 4, 5, 5]
 lis = [1, 2, 2, 3, 4, 4, 4, 5, 5]
 uniq_list = []
 dup_list = []
@@ -180,19 +244,45 @@ for i in lis:
         dup_list.append(i)
 print(dup_list)
 
-# Find the number occurring odd number of times
+# 23. Find the number occurring odd number of times, lis = [1, 1, 2, 2, 3, 3, 3]
 lis = [1, 1, 2, 2, 3, 3, 3]
 res = 0
 for i in lis:
     res = res ^ i
 print(res)
 
+# 24. from given list arr = [-1,0,1,2,3,5,6], find two values which sum is equal to sum = 3.
+arr = [-1,0,1,2,3,5,6]
+sum = 3
+print(len(arr)-1,len(arr))
+for i in range(len(arr)-1):
+    for j in range(i+1,len(arr)):
+        if arr[i] + arr[j] == sum:
+            print("index of i & j",i,j, 'value: ',arr[i], arr[j])
 
+# 25.  sum is equal to the target.
+arr = [2,6,5,8,11]
+target = 14
 
+print("len(arr)-1 = ",len(arr)-1,"& len(arr) = ",len(arr))
+for i in range(len(arr)-1):
+    for j in range(i+1, len(arr)):
+        if arr[i] + arr[j] == target:
+            print(f"the target value of sum {arr[i]} & {arr[j]}",i,j)
 
+# 26.
+nums = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+target_sum = 9
+# output = (1,8)(2,7)(3,6)(4,5)
 
+for i in range(len(nums)-1):
+    for j in range(i+1, len(nums)):
+        if nums[i] + nums[j] == target_sum:
+            print(nums[i],nums[j])
+
+# 27. From given list my_list = [[0, 1, 2, 3] for i in range(2)],  print the output 3
 my_list = [[0, 1, 2, 3] for i in range(2)]
-# print(my_list[1][3])
+print(my_list[1][3])
 
 """
 * * * * *
@@ -305,71 +395,3 @@ for i in range(1,n+1):
 n = 5
 for x in range(n):
     print(" " *(n-x-1) + "*" * (2*x+1))
-
-
-
-
-
-l = [11,22,30,8,35] #if > 20 -1, < 20 -2
-print([x-1 if x > 20 else x-2 for x in l])
-
-# reverse a list, without any built in function or slicing.
-lst = [1, 2, 3, 4, 5]
-r_list = []
-for value in lst:
-    print(value)
-    r_list = [value] + r_list
-print("List after reverse : ", r_list)
-
-# count and remove duplicates from list and then convert list to dictinory.
-l = [11,22,11,30,8,35,8,8,22]
-d = {}
-a = []
-b= []
-c = 0
-for i in l:
-  if i not in a:
-    a.append(i)
-    c = l.count(i)
-    b.append(c)
-print(a,b)
-for key in a:
-  for value in b:
-    d[key] = value
-    b.remove(value)
-    break
-print(str(d))
-
-t=['a','b','b','a','c','b']
-
-dd = {}
-for x in t:
-    if x in dd:
-      dd[x] += 1
-    else:
-      dd[x] = 1
-print(dd)
-
-# Reverse a number & string
-n = 123456
-rev = 0
-while (n>0):
-  a = n % 10
-  rev = rev * 10 + a
-  n = n//10
-print(rev)
-
-s = "manoj"
-r = ''
-for i in s:
-  r = i + r
-print(r,s[::-1])
-
-# from given list arr = [-1,0,1,2,3,5,6], find two values which sum is equal to sum = 3.
-arr = [-1,0,1,2,3,5,6]
-sum = 3
-print(len(arr)-1,len(arr))
-for i in range(len(arr)-1):
-    for j in range(i+1,len(arr)):
-        if arr[i] + arr[j] == sum:
-            print("index of i & j",i,j)
