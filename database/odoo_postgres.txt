@@ -1,1 +1,6 @@
+1. To Know the location of odoo currently running
+    ps ax | grep odoo
+
+2. To start with odoo welcome page, what changed in odoo configuration.
+    db_filter = '^%d$'
 Postgres

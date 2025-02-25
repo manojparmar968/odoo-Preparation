@@ -1,0 +1,4 @@
+# Sub Contractor --> In manufacturing module, in BOM (Bill of material) creation to define whom vendor will
+    be define.
+
+    MRP > settings > operations > enable sub contracting.

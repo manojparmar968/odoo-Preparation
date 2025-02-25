@@ -61,12 +61,30 @@
     Reordering rules automatically generate purchase or manufacturing orders when a product's stock level drops below a certain threshold. 
     Replenishment is a manual process that restocks products to maintain inventory levels.
 
+# Costing Method in odoo
+    1. Standard Costing --> Method is basic & easy just put the cost price on product master.
+        Example:-
+            Cost of Product A is set 7rs,
+            PO create with 10rs with 10kg but in inventory show 10kg with 70rs
+
+    2. Average Costing --> cost of items in inventory is calculated based on the average cost of all
+        available similar items in inventory.
+        Example:-
+            Cost of an item in inventory divided by the number of item availble in stock.
+
+    3. Real-time (FIFO, LIFO, FEFO) Costing --> 
+        1. odoo keeps the track of the cost of each incoming & outgoing item.
+        2. The real-time costing method works along with the stock removal strategy i.e FIFO, LIFO & FEFO.
+        3. So we have to select one of them from product category otherwise by default FIFO will select.
+
 # Odoo Stock Removal Strategies?
     1. First In First Out (FIFO) :- Products/Lots that were stocked first will be moved out first.
     2. Last In First Out (LIFO) :- Products/Lots that were stocked last will be moved out first.
     3. Closest Location :- Products/Lots with the closest to the target location will be moved out first.
-    4. First Expiry First Out (FEFO) :- Products/Lots with the closest removal date will be moved out first(The availability of this method depends on the "Expiration Dates" Settings.)
-    5. Least Packages :- FIFO but with the least number of packages possible when there are several packages containing the same product.
+    4. First Expiry First Out (FEFO) :- Products/Lots with the closest removal date will be moved out 
+        first(The availability of this method depends on the "Expiration Dates" Settings.)
+    5. Least Packages :- FIFO but with the least number of packages possible when there are several 
+        packages containing the same product.
 
 # Consignment inventory?
     Consignment inventory is a supply chain model where a retailer sells a supplier's product, 
@@ -80,6 +98,13 @@
     places with its supplier to allow multiple delivery dates over a period of time, often negotiated to 
     take advantage of predetermined pricing. It is normally used when there is a recurring need for 
     expendable goods.
+
+# Lot --> specific batch of an item recieved, stored or shipped from your warehouse & a lot has a unique
+    number for tracking.
+
+# Lot V/S serial number
+    A Lot is useful for products you make or receive in large quantities.
+    Serial number are good for products that require after sales services.
 
 # Define routes: Create routes to define the paths that goods take through your warehouse and supply chain.
 

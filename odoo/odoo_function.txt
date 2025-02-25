@@ -6,6 +6,10 @@
         res = super(className,self).action_button()
         return res
 
+# record set --> Multiple row of data.
+
+# record --> Single row of data.
+
 # ORM(Object Relational Maping)
     1. ORM maps models to database tables.
     2. ORM also creates database tables for models in application.
@@ -161,7 +165,8 @@
     fields_views_get has been renamed to get_view in Odoo 16.
     This method returns the fields_views of given views, along with the fields of the current model, 
     and optionally its filters for the given action.
-    It returns the dictinory.
+    Note:-
+        It's returns type is dictinory.
 
 # default_get()
     default_get method collect the default values for all the fields when creating a new record.

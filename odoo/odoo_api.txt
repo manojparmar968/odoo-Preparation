@@ -1,0 +1,15 @@
+# odoo API --> odoo uses Restful api.
+    1. Get --> To get data from api.
+    2. Post --> To send data to api when creating records.
+    3. Put --> To update/ edit existing data.
+    4. Delete --> To remove/delete data.
+
+# Restful API --> is a API that uses HTTP request to get, Put, Post & delete data.
+    It uses both OAuth1 & OAuth2 protocols to authenticate 3rd party application.
+
+# API Response Status code
+    1.Informational => 1**
+    2.Success => 2**
+    3.Redirection => 3**
+    4.Client Error => 4**
+    5.Server Error => 5**

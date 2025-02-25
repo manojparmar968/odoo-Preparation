@@ -15,9 +15,10 @@
     9. pivot             10. graph              11. map                 12. cohort
 
 # Types of model in odoo
-    1. 
-    2. models.model
-    3.
+    1. AbstractModel (models.AbstractModel) --> is used to reduce the code & implement common logic in
+        reusable component.
+    2. models (models.Model)
+    3. TransientModel (models.TransientModel) --> where data is stored temporary & used for wizards.
 
 # wizard -->
     1. wizard models are not stored in a database.
@@ -59,8 +60,11 @@
     5. Report Actions (ir.actions.report)
     6. Automated Actions (ir.cron)
 
-# Onchange
+# Onchange/@api.onchange()
     is triggered only when one of the given attributes changes its value.
+    Example
+        @api.onchange('value')
+        def _onchange_(self):
 
 # compute method
     should assign a value to the computed field therefore, it is necessary to ensure that the 
@@ -70,13 +74,22 @@
         2. Compute Field are not stored by defult.
         3. To store field in database use store = True.
         4. Compute field are readonly by default.
-        5. 
+        5. if you are not using depends in compute method it will work only when form or tree will loard.
+    Example
+        def _compute_(self):
 
 # Inverse: 
     The inverse function is mainly used to make the compute field editable. 
     A user can’t change a compute field value.
     An inverse function can be used to solve this problem.
     This inverse function can be given along with the compute function.
+
+# depends/@api.depends()
+    When a compute function is dependent on another record, then we have to use this depends decorator.
+    This decorator will be called when some changes happens in the specified fields.
+    Example:
+        @api.depends('value')
+        def _compute_(self)
 
 # computed fields and onchanges -:
     both computed fields and onchanges may be used to achieve the same result. 
@@ -102,12 +115,17 @@
 # ref in odoo --> returns the record corresponding to an xml id.
     self.env.ref('module_name.xml external id').id
 
+# Access Control/Access Rights --> Access rights are used to control user access to the odoo database.
+
 # Record Rule --> are set to determine who can access the object according to the rule.
     we have 4 access modes for the object.
     1. create --> Access to create records in the object.
     2. write (edit) --> Access to write records in the object.
     3. Read (view only) --> Access to read records in object.
     4. delete --> Delete access to delete object.
+
+# Groups --> user can have access under access rights. Group specify to menu or fields will display for
+    particular security group.
 
 # qweb Report --> Qweb is a reporting engine or template engine used by odoo, by using this we can create
     reports in odoo. It uses xml to create design reports as per your need.
@@ -158,6 +176,8 @@
         @api.Constraints('value1', 'value2')
 
     Note:-  When performance matters always use sql Constraints.
+
+# Assert Function --> are used to check whether the operation's output is True or False.
 
 # res.partner: 
     a partner is a physical or legal entity. It can be a company, an individual or even a contact address.
@@ -219,6 +239,15 @@
         d. Test
         e. Deploy
         f. Review
+
+# SDLC (software development life cycle)
+    The goal of SDLC is to minimize project risk through forward planning.
+    1. planning
+    2. Analysis
+    3. Design
+    4. implementation
+    5. Testing
+    6. Maintainance
 
 # @api.multi --> self will be the current recordset without iteration.
     Note:-
