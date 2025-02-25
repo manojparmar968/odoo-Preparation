@@ -181,6 +181,25 @@ for x in t:
 print(dd)
 
 # 15. remove duplicates from a list.nums = [1, 2, 3, 2, 1, 3, 2, 4, 5, 4]
+nums = [1, 2, 3, 2, 1, 3, 2, 4, 5, 4]
+dup_list = []
+unique_list = []
+c = 0
+for i in nums:
+    if i not in unique_list:
+        unique_list.append(i)
+        c = nums.count(i)
+        dup_list.append(c)
+
+        # OR
+
+for i in range(len(nums)):
+    if nums[i] not in unique_list:
+        unique_list.append(nums[i])
+        c = nums.count(nums[i])
+        dup_list.append(c)
+print(unique_list)
+print(dup_list)
 
 # 16. l = [11,22,30,8,35] #if > 20 -1, < 20 -2 using list comphersion. o/p = [9, 21, 29, 6, 34]
 l = [11,22,30,8,35] #if > 20 -1, < 20 -2
