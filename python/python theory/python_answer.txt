@@ -180,6 +180,10 @@
 
 44. monkey patching --> you can modify a class or module at run-time.
 
+45. Difference between is & ==
+    The is operator is used to check if different variables are pointing to the same object in memory. 
+    The == operator is used in Python when the values of the operands are equal.
+
 Python Constraints -->
 Python Constant -->
 Protected Members -->
