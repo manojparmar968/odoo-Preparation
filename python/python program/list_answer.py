@@ -105,6 +105,16 @@ for i in arr:
 print(uniq_list)
 print(count_comm_list)
 
+uniq_arr = []
+dup_arr = []
+for i in arr:
+    if i not in uniq_arr:
+        uniq_arr.append(i)
+    elif i not in dup_arr:
+        dup_arr.append(i)
+print(uniq_arr)
+print(dup_arr)
+
 # 8. the factorial of 6 is 1*2*3*4*5*6 = 720.
 num = 6
 fact = 1

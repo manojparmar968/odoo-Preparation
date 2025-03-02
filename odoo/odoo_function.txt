@@ -180,23 +180,8 @@
         contextual_self = self.with_context(default_name=default_name, default_code=default_code) # pass you need in placeof self
         return super(ClassName, self).default_get(default_fields)
 
-
-
-
-
-
-
- 
-
 # 2 types of Button Call
     1. object type that call python function
         name="button_action_"
     2. action type that call action from xml file
         name="%(button_action_)d"
-
-# record set we get number of ids for given domain
-# search read will give dict.
-
-
-
-
