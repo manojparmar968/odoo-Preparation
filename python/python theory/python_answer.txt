@@ -20,7 +20,8 @@
 
 6. Python class --> A class is like an object constructor or blue print for creating object.
 
-7. Python Constructor --> is a special class method for creating & initializing an object instance at that class.
+7. Python Constructor --> is a special class method for creating & initializing an object instance at that 
+    class.
 
 8. __init__ --> is used to assign values to object properties.
     e.g 
@@ -96,13 +97,14 @@
 23. decorators --> is used to add functionality to an existing code this is called meta programing
     because a part of the program tries to modify another part of the program at compile time.
 
-24. sets --> is a collection which is unordered & unindexed or unchangeable. sets are written curly brackets.
+24. sets --> is a collection which is unordered & unindexed or unchangeable. sets are written curly 
+    brackets.
     1. Duplicate not allowed.
     2. Store multiple item in single variable.
     3. Slicing is not done in sets.
 
-25. Frozen Set --> is an immutable version of python set while elements of set can be modified but frozen set
-    remains same after creation.
+25. Frozen Set --> is an immutable version of python set while elements of set can be modified but frozen 
+    set remains same after creation.
     Frozen set can take single parameter iterable can be set, dictionary & tuple.
 
 26. Primitive Data Structure -->
@@ -124,8 +126,8 @@
     2. Polymorphism --> means one name many forms. Two types
         a. Static --> Overloading
         b. Dynamic --> Overriding
-        Overloading --> occurs when two or more methods in one class have the same method name but different
-            parameters.
+        Overloading --> occurs when two or more methods in one class have the same method name but 
+            different parameters.
         Overriding --> means having two methods with the same method name & parameters.
     3. Data Abstraction --> means a concept or idea which is not associated with any particular instance.
     4. Encapsulation --> Hiding of data implementation by restricting access to public methods.
@@ -138,12 +140,12 @@
 
 30. for loop --> is used for iterating over a sequence.
 
-31. Switch Case --> that allow you control the flow of your program.
+31. Switch Case --> that allow you to control the flow of your program.
 
-32. Pass --> is a null statement, the Interpreter does not ignore a pass statement, but nothing happens & the
-    statement result into no operations.
-    The pass statement is useful when you don't write the implementation of a function but you want to implement
-    it in the future.
+32. Pass --> is a null statement, the Interpreter does not ignore a pass statement, but nothing happens & 
+    the statement result into no operations.
+    The pass statement is useful when you don't write the implementation of a function but you want to 
+    implement it in the future.
 
 33. Continue --> keyword is used to end the current iteration in for loop or while loop & continues to the
     next iteration.
