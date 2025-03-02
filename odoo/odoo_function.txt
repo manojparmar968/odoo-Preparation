@@ -13,7 +13,8 @@
 # ORM(Object Relational Maping)
     1. ORM maps models to database tables.
     2. ORM also creates database tables for models in application.
-    3. ORM performs DML (Data Manipulation Language) operations using simple methods without writing SQL commands.
+    3. ORM performs DML (Data Manipulation Language) operations using simple methods without writing 
+        SQL commands.
 
 # search()
     The search method is used to search records with in the given model based on the domain 
@@ -54,7 +55,8 @@
     current working model.
                         OR
     browse() method is used to access specific records by their IDs.
-    It doesn't perform any filtering based on conditions; instead, you specify the IDs of the records you want to access.
+    It doesn't perform any filtering based on conditions; instead, you specify the IDs of the records you 
+        want to access.
     It's useful when you know the exact IDs of the records you need to work with.
     self.env['model.name'].browse(res[0] or [condition])
 
@@ -125,6 +127,7 @@
     It will bypass the record rules & accessright.
 
 # sort()
+    sort() will returns a None, used with only list methods
     value.sort(key=lambda x: x['sort_weight'])
     value.sort(key=lambda k: (k['all_reached'], k['total_completeness']), reverse=True)
     value.sort(key=lambda values: values['user_id'][0] != self.env.user.id if values['user_id'] else -1)
@@ -132,6 +135,7 @@
 # sorted()
     sorted method returns the records inside the self, ordered by the key passed as the argument.
     if reverse is set True, returns the result in reverse order.
+    sorted() will returns a list
     .sorted(lambda m: (m.date, m.ref or '', m.id))
     .sorted(lambda x: x.invoice_date_due or x.date)
     .sorted('date_start', reverse=True)
@@ -143,7 +147,7 @@
     <field string="" name="" context="{'':''}"/> # fields
     <field name="context">{}</field> # model="ir.actions.act_window"
 
-    Note:- Python dictionary is used to pass the data & frozenDict (immutable)
+    Note:- Python dictionary is used to pass the data & frozenDict (immutable).
 
 # with_context()
     .with_context() helps to send some extra context along with current environment. 

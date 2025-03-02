@@ -5,8 +5,10 @@
 
 # Landed Cost
     The landed cost feature in odoo will allow you to include all the additional cost i.e purchase amount, 
-    amount of the product, shipment, insurance, custom duties, service charge, currency conversion, transportation fee etc.
-    The landed cost can be calculated based on your company specifications so, it may differ from one company to another company.
+        amount of the product, shipment, insurance, custom duties, service charge, currency conversion, 
+        transportation fee etc.
+    The landed cost can be calculated based on your company specifications so, it may differ from one 
+        company to another company.
     
     Inventory > Settings > valuation > Landed Cost.
 
@@ -17,17 +19,17 @@
     Inventory > Configuration > Settings > operations > Batch Picking.
 
 # DropShipping
-    * DropShipping is method for fullfilling the order.
-    * where the product is delivered to a customer directly from the vendor's store is called DropShipping.
+    1. DropShipping is method for fullfilling the order.
+    2. where the product is delivered to a customer directly from the vendor's store is called DropShipping.
 
     Inventory > Configuration > settings > Warehouse > Enable Multi Step Routes.
     Purchase > Configuration > Settings > logistics > Enable DropShipping.
 
 # Location types
-    1. Physical Location:- is the area where one product is held in hand, its the warehouse internal site.
+    1. Physical Location:- is the area where one product is in hand, its the warehouse internal site.
         which can also be assigned to the loading & unloading location in a warehouse or shelf etc.
 
-    2. Location of Partners:- It act like a Physical location. This could be seen as the spaces in which
+    2. Partner's Location:- It act like a Physical location. This could be seen as the spaces in which
         you were not the owner but stands between a seller or a customer warehouse.
 
     3. Virtual Location:- The space or area that do not exist in reality or Physical.
@@ -58,7 +60,8 @@
 
 # What is the difference between reordering and replenishment in Odoo?
     Reordering rules and replenishment are features in Odoo that help manage inventory efficiently. 
-    Reordering rules automatically generate purchase or manufacturing orders when a product's stock level drops below a certain threshold. 
+    Reordering rules automatically generate purchase or manufacturing orders when a product's stock level 
+        drops below a certain threshold. 
     Replenishment is a manual process that restocks products to maintain inventory levels.
 
 # Costing Method in odoo

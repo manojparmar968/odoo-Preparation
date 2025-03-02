@@ -13,7 +13,7 @@
 
 # Multiple Pricing 
     Which is the least complicated pricing feature & volume pricing.
-    which means you can sell the product at different quantities & depending upon the quantity, you get a 
-    different price which you can apply seasonally or to a single customer.
+    which means you can sell the product at different quantities & depending upon the quantity, 
+        you get a different price which you can apply seasonally or to a single customer.
 
     Sales > settings > Multiple Sales Price.

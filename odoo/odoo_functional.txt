@@ -17,6 +17,7 @@
 # Types of model in odoo
     1. AbstractModel (models.AbstractModel) --> is used to reduce the code & implement common logic in
         reusable component.
+        Abstract models don’t have corresponding database tables.
     2. models (models.Model)
     3. TransientModel (models.TransientModel) --> where data is stored temporary & used for wizards.
 
@@ -44,13 +45,15 @@
 
 # Odoo Architecture --> odoo follows a multitier Architecture.
     1. Presentation tier --> The top most level of the application is the user interface.
-        The main function of the interface is to transalate task & result to something the user can understand.
+        The main function of the interface is to transalate task & result to something the user can 
+            understand.
     
     2. Logic tier --> This layer coordinates the application, processes commands, make logical decisions &
-        evaluations & performs calculations. It also moves & process data between the two surrounding layers.
+        evaluations & performs calculations. It also moves & process data between the two surrounding 
+            layers.
     
-    3. Data tier --> Here information is stored & retrieved from a database or file system. The information 
-        is back to logic tier for processing & then back to user.
+    3. Data tier --> Here information is stored & retrieved from a database or file system. 
+        The information is back to logic tier for processing & then back to user.
 
 # Different types of actions in odoo
     1. server Actions (ir.actions.server)
@@ -229,10 +232,11 @@
         Exceptional losses, such as damages due to a major earthquake
 
 6.What is Agile methodology?
-    Agile methodology is a project management framework that breaks projects down into several dynamic phases, 
-    commonly known as sprints. 
-    The Agile framework is an iterative methodology. After every sprint, teams reflect and look back to see 
-    if there was anything that could be improved so they can adjust their strategy for the next sprint.
+    Agile methodology is a project management framework that breaks projects down into several dynamic 
+        phases, commonly known as sprints. 
+    The Agile framework is an iterative methodology. After every sprint, teams reflect and look back to 
+        see if there was anything that could be improved so they can adjust their strategy for the next 
+        sprint.
         a. Plan
         b. Design
         c. Develop
