@@ -84,13 +84,26 @@ print("count",count)
 """
 Remove Duplicate from array
 """
-uniq_arr = []
-dup_arr = []
+count = 0
+lst = []
+
 for i in arr:
-    if i not in uniq_arr:
-        uniq_arr.append(i)
-    elif i not in dup_arr:
-        dup_arr.append(i)
+    if i not in lst:
+        lst.append(i)
+        count = arr.count(2)
+print("count of 2 is: ",count)
+print(lst)
+
+uniq_list = []
+count_comm_list = []
+c = 0
+for i in arr:
+    if i not in uniq_list:
+        uniq_list.append(i)
+        c = arr.count(i)
+        count_comm_list.append(c)
+print(uniq_list)
+print(count_comm_list)
 
 # 8. the factorial of 6 is 1*2*3*4*5*6 = 720.
 num = 6

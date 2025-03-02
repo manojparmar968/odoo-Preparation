@@ -1,11 +1,33 @@
-n = 20
-# , o/p = 1 2 3 4 tom 6 cat 8 9 tom 11 12 13 cat tom 16 17 18 19 tom
-# i%5 == 0 tom
-# i%7 ==0 cat
+# Count All The 2 From given array and remove duplicate from arry.
+arr=[0,1,2,2,3,4,5,6,2,7,8,9,2,8,7,0]
 
-for i in range(1,n+1):
-    if i%5 == 0:
-        i = 'tom'
-    elif i%7 == 0:
-        i = 'cat'
-    print(i)
+count = 0
+lst = []
+
+for i in arr:
+    if i not in lst:
+        lst.append(i)
+        count = arr.count(2)
+print(count)
+print(lst)
+
+uniq_list = []
+count_comm_list = []
+c = 0
+for i in arr:
+    if i not in uniq_list:
+        uniq_list.append(i)
+        c = arr.count(i)
+        count_comm_list.append(c)
+print(uniq_list)
+print(count_comm_list)
+
+uniq_arr = []
+dup_arr = []
+for i in arr:
+    if i not in uniq_arr:
+        uniq_arr.append(i)
+    elif i not in dup_arr:
+        dup_arr.append(i)
+print(uniq_arr)
+print(dup_arr)
