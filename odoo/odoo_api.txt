@@ -7,35 +7,18 @@
 # Restful API --> is a API that uses HTTP request to get, Put, Post & delete data.
     It uses both OAuth1 & OAuth2 protocols to authenticate 3rd party application.
 
-# auth = 'none'
+# auth = 'none' /auth = 'public'
     1. This means that no authentication is required to access the route or method.
     2. The route can be accessed by anyone, regardless of whether they are logged in or not.
     3.It is typically used for routes that are intended to be publicly accessible, 
         such as APIs that do not require user authentication.
     Example:
-        @http.route('/my/public/route', auth='none', type='json')
-        def public_route(self):
-
-# auth = 'public'
-    1. This means that public authentication is required, which in Odoo refers to routes that can be 
-        accessed by any user, but the system still checks if the user is authenticated 
-        (even if it's just a public user).
-    2. The route is open for both logged-in and non-logged-in users, 
-        but non-logged-in users are treated as a "public" user, 
-        typically with limited access to the system.
-    3. It is used for routes that need to be accessible to the public but may still need to check whether 
-        the user is logged in (so the system treats them as "public" users).
-    4. This means no authentication is required to access this route (public access).
-    5. No user authentication is required.
-    6. No authentication needed, public access.
-    Example:
-        @http.route('/my/public/route', auth='public', type='json')
+        @http.route('/my/public/route', auth='none'/'public', type='json')
         def public_route(self):
 
 # auth='user': 
     1. This means the user must be logged in to access this route.
     2. Ensures the user is authenticated.
-    3. Requires the user to be logged in.
 
 # auth='api': 
     1. This is used to authenticate API requests using an API key.
