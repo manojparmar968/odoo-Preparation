@@ -1,3 +1,30 @@
+# Accounts Basic 
+    1. Set Up Fiscal Year
+        Accounting → Configuration → Fiscal Periods.
+    2. Define Chart of Accounts
+        Go to Accounting → Configuration → Chart of Accounts.
+            1. Account Types: These include assets, liabilities, income, expenses, etc.
+            2. Account Groups: These group accounts together for better management.
+    3. Set Up Taxes
+        Go to Accounting > Configuration > Taxes.
+    4. Configure Payment Methods
+        Go to Accounting > Configuration > Payment Methods.
+    5. Define Journals
+        Go to Accounting > Configuration > Journals.
+        Journals are used to record different types of transactions. You can define:
+            1. Sales Journal --> For sales invoices and payments.
+            2. Purchase Journal --> For purchase invoices and payments.
+            3. Bank Journal: For bank transactions.
+            4. Cash Journal: For petty cash transactions.
+        Note. You can also create custom journals based on your business needs.
+    6.  Configure Invoicing Settings
+        In Accounting > Settings > Invoicing
+            Invoice Sequences: Define the sequence for invoices (e.g., INV-001, INV-002).
+            Customer Invoice Terms: Set terms like due on receipt, 30 days, etc.
+            Invoicing Policies: Define whether invoices are based on ordered quantities or delivered quantities.
+    7. Set Up Bank Accounts
+        Go to Accounting > Configuration > Bank Accounts.
+
 # Fiscal position
     enable us to create a bunch of rules to change taxes & accounts used by a transaction automatically.
     They can apply automatically, depending rules & added manually.

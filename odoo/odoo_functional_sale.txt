@@ -1,3 +1,11 @@
+# Sale Order Configure Basic Settings
+    1. Sales Teams
+    2. Quotation Template
+    3. Invoice Policy --> You can choose between "Ordered quantities" or "Delivered quantities" for 
+        invoicing.
+    4. Shipping Policy --> Choose whether you want to invoice based on order or delivery.
+    5. Payment Terms --> Set default payment terms that will be applied to sales orders.
+
 # workflow of the sales module
     1. Lead generation --> capture their information as leads.
     2. Quotation -->  Create a quotation for the customer
