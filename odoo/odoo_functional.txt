@@ -18,7 +18,8 @@
     1. AbstractModel (models.AbstractModel) --> is used to reduce the code & implement common logic in
         reusable component.
         Abstract models don’t have corresponding database tables.
-    2. models (models.Model)
+    2. models (models.Model) --> representation of a database table. It defines the structure of the data, 
+        the fields, and the business logic.
     3. TransientModel (models.TransientModel) --> where data is stored temporary & used for wizards.
 
 # wizard -->
@@ -262,7 +263,9 @@
 @api.model --> This decorator will convert old API calls to decorated function to new API signature.
     It allow to be polite when migrating code.
 
-@api.depends('value') --> If any of field in the decorator is altered by ORM or changed in the form.
+@api.depends('value') --> When a compute function is dependent on another record, then we have to use this 
+        depends decorator.
+    This decorator will be called when some changes happens in the specified fields.
     @api.depends('value', 'value2')
     def _compute_(self):
 

@@ -1,4 +1,4 @@
-# Accounts Basic 
+# Accounts Basic Setup
     1. Set Up Fiscal Year
         Accounting → Configuration → Fiscal Periods.
     2. Define Chart of Accounts
