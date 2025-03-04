@@ -1,3 +1,21 @@
+# configure inventory settings
+    1. Define products
+    2. Set up warehouses
+    3. Configure inventory valuation --> FIFO, LIFO & FEFO.
+    4. Define routes -->  Create routes to define the paths that goods take through your warehouse and 
+        supply chain.
+    5. Configure shipping methods
+
+# Inventory operations
+    1. Recipts
+    2. Internal transfers
+    3. Pick
+    4. Delivery Order
+    5. manufacturing 
+    6. POS Orders
+    7. DropShipping
+    8. Sub Contractor
+
 # Types of Products
     1. consumable --> user don't want to manage the inventory.
     2. service --> are also considered as a product, but user can't keep stock of a service.
@@ -60,15 +78,6 @@
 
 # Inventory Lead Time -->
 
-# Inventory operations
-    1. Recipts
-    2. Internal transfers
-    3. Pick
-    4. Delivery Order
-    5. manufacturing 
-    6. POS Orders
-    7. DropShipping
-    8. Sub Contractor
 
 # What is the difference between reordering and replenishment in Odoo?
     Reordering rules and replenishment are features in Odoo that help manage inventory efficiently. 
@@ -123,9 +132,3 @@
 
 # Define routes: Create routes to define the paths that goods take through your warehouse and supply chain.
 
-# configure inventory settings
-    1. Define products
-    2. Set up warehouses
-    3. Configure inventory valuation --> FIFO, LIFO, 
-    4. Define routes -->  Create routes to define the paths that goods take through your warehouse and supply chain.
-    5. Configure shipping methods
