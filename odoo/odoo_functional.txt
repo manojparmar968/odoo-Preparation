@@ -57,16 +57,16 @@
         The information is back to logic tier for processing & then back to user.
 
 # Different types of actions in odoo
-    1. server Actions (ir.actions.server) --> work on a base model & offers various types of actions that
-        can be executed automatically.
+    1. server Actions (ir.actions.server) --> offers various types of actions that can be executed 
+        automatically.
 
     2. window Actions (ir.actions.act_window) --> It is used to present the visualization of the data 
         models through different types of views.
 
     3. URL Actions (ir.actions.act_url) --> allow to open a URL (website/webpage) via an odoo action.
 
-    4. Client Actions (ir.actions.client) --> These are basically menu-item defined in xml & the 
-        corresponding actions are mapped to a widget.
+    4. Client Actions (ir.actions.client) --> are basically menu-item defined in xml & the corresponding 
+        actions are mapped to a widget.
 
     5. Report Actions (ir.actions.report) --> are the actions which trigger the printing actions of report.
         'report_type' represents the type of the report whether it is a PDF report (qweb-pdf) or HTML 
@@ -81,15 +81,15 @@
         def _onchange_(self):
 
 # compute method
-    should assign a value to the computed field therefore, it is necessary to ensure that the 
-    compute method will asign a value to the field on every condition.
+    should assign a value to the computed field therefore, it is necessary to ensure that the compute 
+        method will asign a value to the field on every condition.
     Note:-
         1. It should specify those fields using @api.depends('value1', 'value2').
         2. Compute Field are not stored by defult.
         3. To store field in database use store = True.
         4. Compute field are readonly by default.
         5. if you are not using depends in compute method it will work only when form or tree will loard.
-        6.  When computed fields depend on other computed fields, changing a value can trigger a large 
+        6. When computed fields depend on other computed fields, changing a value can trigger a large 
             number of recomputations. This leads to poor performance.
     Example
         def _compute_(self):
@@ -107,16 +107,6 @@
         @api.depends('value')
         def _compute_(self)
 
-# _ :-
-    note that our method name isn’t prefixed with an underscore (_). This makes our method a public method,
-    which can be called directly from the Odoo interface (through an RPC call). 
-    Until now, all methods we created (compute, onchange) were called internally, 
-    so we used private methods prefixed by an underscore. 
-    You should always define your methods as private unless they need to be called from the user interface.
-
-    Always assume that a method can be called on multiple records; it’s better for reusability.
-    Finally, a public method should always return something so that it can be called through XML-RPC. 
-    When in doubt, just return True.
 
 # ref in odoo --> returns the record corresponding to an xml id.
     self.env.ref('module_name.xml external id').id
