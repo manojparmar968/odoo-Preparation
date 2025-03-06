@@ -132,3 +132,6 @@
 
 # Define routes: Create routes to define the paths that goods take through your warehouse and supply chain.
 
+#  What is 3PL process?
+    Third-party logistics (or 3PL) refers to the outsourcing of ecommerce logistics processes to a third 
+    party business, including inventory management, warehousing, and fulfillment.
