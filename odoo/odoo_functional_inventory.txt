@@ -67,7 +67,7 @@
     forecasted quantity = onhand quantity - outgoing shipment + incoming shipment.
 
 # Inventory Adjustment --> are used to update stock quantities manually, typically when there is a 
-    discrepancy between the physical stock.
+    mismatch between the physical stock.
     This can be due to various reasons such as damaged goods, theft, or losses during transit.
 
     Operations menu >  Inventory Adjustments

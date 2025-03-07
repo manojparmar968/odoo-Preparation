@@ -154,6 +154,15 @@ print(i.split('_')[::-1][0].split('.')[0].capitalize())
 
 # 11. Remove repeat character for string, 
 s = "mmaannooj"
+result = ""
+for char in s:
+    if char not in result:
+        result += char
+print(result)
+
+result = ''.join(sorted(set(s), key=s.index))
+print(result)
+
 s1 = ["a", "b", "a", "c", "c"] # o/p = ['a', 'b', 'c']
 #Remove repeat character for string
 s = "innage" 
