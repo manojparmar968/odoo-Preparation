@@ -182,6 +182,10 @@
 
 # 2 types of Button Call
     1. object type that call python function
-        name="button_action_"
+        <button name="button_action_" # define a function in py file.
+            string="" type="object" icon="fa-refresh"
+        />
     2. action type that call action from xml file
-        name="%(button_action_)d"
+        <button name="%(button_action_)d" # pass the XML Action view external id.
+            string="" type="action"
+        />

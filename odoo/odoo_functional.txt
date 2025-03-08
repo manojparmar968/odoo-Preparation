@@ -22,6 +22,9 @@
         the fields, and the business logic.
     3. TransientModel (models.TransientModel) --> where data is stored temporary & used for wizards.
 
+# rec_name --> is an attribute used to define the string representation of a record in the 
+    user interface (UI).
+
 # wizard -->
     1. wizard models are not stored in a database.
     2. Records are created temporary & removed when operations are finished.

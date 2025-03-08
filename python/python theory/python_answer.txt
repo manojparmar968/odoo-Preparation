@@ -44,7 +44,7 @@
     at a specified numbers.
 
 12. diff b/w list & tuple --> 
-    1.List is mutable & Tuple is immutable.
+    1.List is mutable (changeable) & Tuple is immutable (not changeable).
     2.a = list() & a = tuple(,)
     3.List iteration is slower, time consuming & Tuple iteration is faster, less time consuming.
     4.List consumes more memory & Tuple consumes less memory.
