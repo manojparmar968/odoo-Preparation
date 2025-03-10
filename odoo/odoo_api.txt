@@ -7,6 +7,15 @@
 # Restful API --> is a API that uses HTTP request to get, Put, Post & delete data.
     It uses both OAuth1 & OAuth2 protocols to authenticate 3rd party application.
 
+# CRUD (Create, Retrieve, Update or Delete)
+    1. Create (Insert) a Record --> To create a new record, you can use the create() method on a model.
+
+    2. Retrieve/Read (Select) Records --> To read records, you can use the search() method.
+
+    3. Update (Modify) a Record --> To update a record, you can use the write() method.
+
+    4. Delete (Remove) a Record --> To delete a record, you can use the unlink() method.
+
 # auth = 'none' /auth = 'public'
     1. This means that no authentication is required to access the route or method.
     2. The route can be accessed by anyone, regardless of whether they are logged in or not.
