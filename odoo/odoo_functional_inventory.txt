@@ -118,10 +118,9 @@
     arrangement, such as a fixed fee or percentage of the sale price. 
 
 # Blanket Order?
-    A blanket order, blanket purchase agreement or call-off order is a purchase order which a customer 
-    places with its supplier to allow multiple delivery dates over a period of time, often negotiated to 
-    take advantage of predetermined pricing. It is normally used when there is a recurring need for 
-    expendable goods.
+    Blanket Order (also known as a Framework Agreement or Long-term Agreement) is a type of purchase agreement 
+    where a supplier agrees to provide goods or services over a specified period, at predetermined prices or 
+    terms. 
 
 # Lot --> specific batch of an item recieved, stored or shipped from your warehouse & a lot has a unique
     number for tracking.

@@ -6,7 +6,7 @@
         res = super(className,self).action_button()
         return res
 
-# record set --> Multiple row of data.
+# record set/set of records --> Multiple row of data.
 
 # record --> Single row of data.
 
