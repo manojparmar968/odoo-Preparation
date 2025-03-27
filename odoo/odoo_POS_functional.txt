@@ -1,0 +1,4 @@
+# Point of Sale --> run your shops and restaurants easily. The app works on any device with a web browser, 
+    even if you are temporarily offline.
+
+#

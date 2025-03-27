@@ -1,0 +1,25 @@
+# useState --> hook has to be given an object or an array and will return an observed 
+    version of it.
+
+    Note:- useState only works with objects or arrays.
+
+# useRef --> hook is useful when we need a way to interact with some inside part of a 
+    component, rendered by Owl. It only work on a html element tagged by the t-ref.
+
+# useComponent --> useComponent hook is useful as a building block for some customized 
+    hooks, that may need a reference to the component calling them.
+
+    const component = useComponent();
+
+# useEnv --> hook is useful as a building block for some customized hooks, that may need a 
+    reference to the env of the component calling them.
+
+    const env = useEnv();
+
+# useEffect --> 
+
+# Sub components -->  is called composition.
+    one can just use a tag starting with a capital letter in its template, and register the 
+    sub component class in its static components object.
+
+# 26

@@ -1,0 +1,202 @@
+1. What does it mean for a journal entry to be balanced?
+    It has the same amount of debits & credits.
+
+2. The general ledger is
+    A list of all of the accounts and their debits & credits.
+
+3. How many Chart of Accounts can you have per company?
+    One per company, but multiple per database.
+
+4. What happens if no currency is set on an account?
+    If no currency is set, the account can be used with any currency.
+
+5. What happens if an account is managed in a currency different from the company’s main currency?
+    Odoo stores the foreign currency amount and then stores the converted amount as the debit/credit in the 
+        company’s currency.
+
+6. What is recommended for accounts I do not need?
+    Deprecate the unneeded accounts.
+
+7. I do not need the "Current Year Earnings" account. What can I do with it?
+    The account is Odoo-specific and should NOT be modified in any way.
+
+8. What account should replace the bank account when importing a positive (debit) amount?
+    The outstanding receipts account
+
+9. Which of the following processes is the best way to import open invoices and bills?
+    Add each invoice or bill as one line in the import template with the remaining amount to be paid as the 
+        total and import to the corresponding model.
+
+10 What’s the purpose of replacing the receivable and payable accounts on the general ledger with the 
+    clearing account?
+    It avoids duplicating the balance in the receivable and payable accounts when importing both the general 
+        ledger and the open invoices and bills.
+
+11. If you create an invoice for Azure Interior with 1 product "Large Desk". What are the journal items 
+    created?
+    3 Lines: Product Sales, Tax Received, Account Receivable
+
+12. If an invoice has 2 different products, with the same tax. What will you get as journal items?
+    1 Receivable, 2 Sales, 1 Tax
+
+13. In the journal items, what defines the amounts your customer owes you?
+    A debit in Account Receivable
+
+14. Where can you define the default income account that is used on an invoice?
+    On the product form, or the product category, or the sales journal.
+
+15. What options could you add to an invoice to improve its structure?
+    Sections and notes
+
+16. Is it possible to select all "Draft" invoices and post them in one action?
+    yes
+
+17. In the Sales app, open S00007 from Gemini Furniture. You can see that the Quantity, Delivered, and 
+    Invoiced values of some sales order lines are blue and others are black. Why is that?
+    A blue line means that this sales order line is invoiceable.
+
+18. In Odoo, how can you create one invoice for multiple sales orders belonging to the same customer and 
+    invoicing address?
+    From the sales order list view, select multiple sales orders, click Actions > Create invoice(s), check 
+        Consolidated Billing, and click Create Draft.
+
+19. Which of the following workflows will cause an Invalid Operation error when creating an invoice from a sales order?
+    Creating a regular invoice when no order lines are invoiceable.
+
+20. How can you create a dedicated credit note sequence?
+    By enabling the setting on the ‘Customer Invoices’ journal.
+
+21. If you create a $100 credit note from a $100 invoice, what will the journal entries look like?
+    $100 from the Income Account in the DEBIT column and $100 from the Receivable Account in the CREDIT column.
+
+22. You invoiced a set of wine glasses and cutlery to a customer, but the glasses arrived broken. You want to 
+        refund only the glasses. How do you do it?
+    Create a note from the invoice and remove the cutlery from the credit note’s products, then confirm it.
+
+23. You refunded only the set of wine glasses, the cutlery remains invoiced. You have not received any payment 
+        from the customer yet for that invoice. The credit note was created through the invoice, confirmed, 
+        and sent. What is the status of the invoice related to that credit note?
+    Partially paid.
+
+24. When posting a credit note created from an invoice, what is the note automatically reconciled with?
+    With the invoice.
+
+25. In the journal items tab on a vendor bill, what defines the amount you owe to the vendor?
+    A credit in the Account Payable
+
+26. If a bill has two different products with the same tax. What are the journal items created?
+    1 Payable, 2 Expenses, 1 Tax
+
+27. When you add products to a bill, the account is automatically filled in as "60000 Expenses". Why is that 
+        account selected by default?
+    The Expenses account is the Vendor Bill journal's default account. To verify this answer, open the 
+    journal's form view from the Configuration menu.
+
+28. How can a vendor bill be created?
+    Manually, by uploading a document, and by sending an email to an email alias.
+
+29. What happens when you upload a PDF with multiple bills in Odoo?
+    Clicking on the scissors button allows you to choose where to split the PDF.
+
+30. What does the OCR do?
+    Recognize which texts on the bill belong in which fields in Odoo
+
+31. What aspects are affected by the Payment Terms?
+    The due date
+
+32. Is it possible to customize your T&Cs related to a specific invoice/order/quotation?
+    yes, you can update the default T&Cs in the document when you create it.
+
+33. What are the different formats available for T&C on the invoice?
+    text on invoice & link to the webpage on the invoice.
+
+34. What are “Outstanding” accounts used for?
+
+35. When the Country field in the Configuration tab of a payment provider is empty, this means that
+    This payment provider is available for customers in all countries.
+
+36. How can the message that is displayed in the customer portal when an invoice is paid online be modified?
+    From the payment provider record, open the Messages tab and edit the message text.
+
+37. What is the payment status of an invoice after being paid online?
+    In payment
+
+38. What actions are available when defining a follow-up?
+    Email, SMS, letter.
+
+39. Can a customer’s total overdue amount be checked?
+    Yes, in the Follow-up report section.
+
+40. Where can the content template for follow-ups be selected?
+    In the Follow-up levels configuration form.
+
+41. If you have a 2% cash discount on a 1000.00€ invoice and the “Reduced Tax” is set to “Always”, what will be the base for the tax?
+    980.00€
+
+42. How can the customer know about the payment terms and the cash discount?
+    The payment terms are written on the invoice.
+
+43. What does the Bank Suspense account do?
+    It temporarily holds a balance between creating a bank transaction and reconciling it.
+
+44. Is the Account number (IBAN) field required on a bank journal?
+    No, but the field is required to generate payment files such as SEPA and NACHA.
+
+45. What is the purpose of creating multiple Outstanding Receipts and Outstanding Payments accounts?
+    It allows you to configure each bank/cash journal with its own Outstanding Receipts and Outstanding Payments account to eliminate confusion.
+
+46. How can I automatically import bank transactions in Odoo?
+    By linking my bank account to Odoo via the settings.
+
+47. How can I import my bank transactions?
+    I can import my statements from the “Bank” journal.
+
+48. I just loaded my bank file, what can I do before importing it on Odoo?
+    I can set fields correlating to information contained in my file.
+
+49. Odoo automatically fetches bank transactions every 12 hours. What can you do if you want to fetch bank transactions earlier?
+    Click the “Fetch transactions” from the “Bank” journal.
+
+50. What do blue highlight lines mean in the transaction view?
+    Matching suggestions based on the amount, partner, or reference.
+
+51. Leaving the “Payment Tolerance” field unchecked on a reconciliation model of type “Rule to match invoices/bills” will
+    Match the transaction with invoices/bills regardless of their amount.
+
+52. How can you review all bank transactions that were previously marked as “To check” during the reconciliation process?
+    By clicking on the “X to check” link on the bank journal from the Accounting dashboard
+
+# SEPA
+53. What kind of transactions are credit transfers?
+    Outgoing
+
+54. In Odoo, how can you handle multiple payments at once?
+    Through the “batch payment” function.
+
+55. What must be set on the journal for the mandates to be used?
+    A bank account number
+
+56. To create an SDD mandate for a B2C customer, which SDD scheme must you use?
+    CORE
+
+57. What happens if a customer does not have enough funds in their account?
+    The bank will decline the transaction.
+
+# Taxes
+
+58. How can you set a rounding method for invoices or bills?
+    By selecting the rounding method in the general settings.
+
+59. How can you restrict a tax to goods or services only?
+    By determining a tax scope.
+
+60. You have two taxes on your invoice. The second tax must be calculated after the first tax. How can you enable that in Odoo?
+    Enable “Affect Base of Subsequent Taxes” on the first tax and set the tax sequence so the second tax comes after the first in the tax settings.
+
+61. What is the purpose of the cash basis transition account?
+    To temporarily hold the tax balance between the invoice confirmation and payment
+
+62. Unlike standard taxes, cash basis taxes appear on the tax report
+    When invoices are paid.
+
+63. 
