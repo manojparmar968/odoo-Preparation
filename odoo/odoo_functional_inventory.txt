@@ -129,6 +129,30 @@
     A Lot is useful for products you make or receive in large quantities.
     Serial number are good for products that require after sales services.
 
+# Multi step Routes
+    For One-Step Receipts, you can configure the system to directly move the goods from the Incoming location 
+    to the Stock location
+
+    One-step process: When inventory is received from the vendor, it is immediately added to stock and made 
+        available for use.​
+        Vendor → Warehouse (Stock Available)​
+
+    For Two-Step Receipts, you can create an intermediate step where goods are first moved to a Quality 
+    location before being moved to Stock.
+
+    Two-step process: Inventory is first moved to a designated receiving area for inspection. Once verified, 
+        it is transferred to the main warehouse stock.​
+        Vendor → Receiving Area → Warehouse (Stock Available)​
+
+    For Three-Step Receipts, you can configure an additional intermediate location, such as a Reception 
+    location, where items are received before moving to the Quality location and then finally to Stock.
+
+    Three-step process: Inventory is first received in a staging area, then moved to a quality control zone 
+        for thorough verification. After passing quality checks, it is added to the warehouse stock and made 
+        available for use.​
+
+        Vendor → Receiving Area → Quality Control → Warehouse (Stock Available)
+
 # Define routes: Create routes to define the paths that goods take through your warehouse and supply chain.
 
 #  What is 3PL process?

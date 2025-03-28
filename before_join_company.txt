@@ -1,0 +1,5 @@
+1. No. of Working days in a week
+2. Sick Leave, casual leave & paid leave --> marke sure all are exist.
+3. in sallary make sure there is no variable exist.
+4. Notice perido not more than 30 days.
+5. 
