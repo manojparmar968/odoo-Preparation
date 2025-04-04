@@ -3,4 +3,70 @@
 
 2. To start with odoo welcome page, what changed in odoo configuration.
     db_filter = '^%d$'
+
+3. To Kill Running odoo server in background
+    ps -elf | grep odoo --> odoo running id's
+    sudo kill -9 python
+    sudo kill -9 id
 Postgres
+https://www.tecmint.com/install-postgresql-and-pgadmin-in-ubuntu/
+https://tecadmin.net/how-to-install-pgadmin4-on-ubuntu-20-04/
+https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-pgadmin-4-in-server-mode-on-ubuntu-22-04
+sudo su - postgres
+    psql
+sudo -u postgres psql postgres
+CREATE USER user_name WITH PASSWORD 'secure@password';
+ALTER USER user_name CREATEDB;
+CREATE DATABASE DATABASE NAME;
+GRANT ALL PRIVILEGES ON DATABASE DATABASE NAME to user_name;
+
+Permission DATABASE to system name/user system.name
+    alter DATABASE db_name OWNER to system name/user sys.name;
+
+create role user_name/system_user_name with superuser login;
+ALTER USER user_name CREATEDB;
+Update Password of User
+    ALTER USER user_name WITH PASSWORD 'new_password';
+
+To Create user
+    CREATE USER user_name;
+
+create DB & backup of DATABASE OR Restore DB
+    createdb db_name < file_path;           OR
+    psql db_name < file_path;
+    psql createdb db_name < file_path;
+
+update password or set password
+    update user_name set password = 'password' where id = 2;
+
+To check No. of user
+    \du
+    \du+ for more info
+
+To check No. of DB OR Show DATABASE
+    \l
+
+Delete DB
+    dropdb DATABASE NAME
+
+Create DB
+    createdb DATABASE NAME
+
+Direct login to DB
+    psql db_name;
+    psql -d db_name;
+
+Switch DB to another DB
+    \c db_name;
+
+Update on specific DATABASE
+    psql db_name;
+    update username set password = 'password' where id = 2;
+    update ir_cron set active = 'value';
+
+To Run odoo
+    ./odoo-bin -c file_name.conf --save
+    ./odoo-bin -c file_name.conf --xmlrpc-port=8018 --save
+
+To Update Odoo Module
+    ./odoo-bin -c file_name.conf -d db_name -U all/module_name
