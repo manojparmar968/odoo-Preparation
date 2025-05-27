@@ -1,3 +1,119 @@
+# The Javascript framework is designed to work with three main use cases:
+    web client: this is the private web application, where one can view and edit business data. This is a 
+        single page application (the page is never reloaded, only the new data is fetched from the server 
+        whenever it is needed)
+    
+    website: this is the public part of Odoo. It allows an unidentified user to browse some content, to shop 
+        or to perform many actions, as a client. This is a classical website: various routes with controllers 
+        and some javascript to make it work.
+
+    point of sale: this is the interface for the point of sale. It is a specialized single page application.
+
+web client --> app (navbar, user, menu, action)
+odoo js framework --> generic components, utility functions, views, fields
+owl --> Component system
+owl framework 
+    class based components
+    with xml templates
+    & hooks
+    & a reactivity system
+
+component
+    ready-to-use extendable class
+    template
+    props
+
+owl directives
+    t-on-*
+    t-slot
+    t-set-slot
+
+this
+    refers to the caller of the function
+    arrow function:- retains the value of the surrounding context
+    method:- object itself
+
+call() --> invoke with a specified "this" value.
+apply() --> same as call() but args are in an array.
+bind() --> create a copy of function with fixed "this".
+
+component lifecycle
+    creation => setup
+            async -> onWillStart
+                render
+                Mounted in Dom
+                onMounted
+    update => onWillUpdateProps
+                render
+            async -> onWillPatch
+            updated in Dom
+            onPatched
+    Deletion => onWillUnmount
+                onWillDestroy
+                removed from Dom
+
+hooks
+    Magic functions that hook into a component
+    Usually starts with on or use
+    lifecycle hooks & other hooks
+    Golden Rule:- Can only be used setup()
+
+lifecycle hooks
+    onWillStart:- Before being is rendered
+    onMounted:- After being Mounted in Dom
+    onWillDestroy:- Before removal from Dom
+
+Composability
+    hooks can be composed
+    hook within another hook
+
+State management --> useState({"key": "value"}).
+                    Re-renders component on updates.
+
+ref -->
+    useful way to interact with internal part of a component
+    targeted using t-ref
+    useRef()
+    <input t-ref="input"/>
+    inputRef = useRef("input");
+    inputRef.el.focus();
+    el is set to the HTML element after being mounted on Dom
+    el property is null at first
+    convention: Ref suffix
+    owl provides backbone
+    dom can be manipulated by you
+
+Environment(env)
+    shared object that contains stuff (like services)
+    Sub Environment
+        Environment scoped to a sub-tree
+        useSubEnv({"key": "value"})
+        useChildSubEnv({"key": "value"})
+        created environments are frozen
+        can be called an arbitrary number of times
+
+Services
+    stays alive for the duration of the web client
+    provides some functionality to the rest of the web client.
+    can be used to hold State
+    e.g. notification, ORM, Action, bus etc.
+    kept in a category on the Registry.
+
+Service API 
+    start() NOT setup()
+    can have dependencies
+    can be utilized with useService() hook
+    Must be registered in services category
+
+ORM Services
+    Facilitate easy access to the backend ORM
+    call public methods of models
+
+super
+    Access to the parent
+    super.method(..arguments);
+    only works in methods not functions.
+
 # useState --> hook has to be given an object or an array and will return an observed 
     version of it.
 

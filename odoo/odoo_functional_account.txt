@@ -35,7 +35,9 @@
     Bank reconciliation is the process of matching your bank transactions with your business records, 
     such as customer invoices, vendor bills, and payments.
 
-# Chart of accounts -->
+# Chart of accounts (CoA) -->
+    It's a list of all the accounts your company uses to track financial transactions like assets, liabilities,
+        income, and expenses.
     Balance Sheet 
         1. Equity --> finical ownership of the comapany like Shareholder accounts and retained earnings.
         2. Assets --> What the company owns like Bank & Cash accounts, current assets (Accounts Reciable), 
@@ -65,6 +67,7 @@
     In Payment --> Full payment is registered as status is In-payment.
     Paid --> when a payment is reconsiled with bank transaction the status is paid.
 
-# SEPA (Single Euro payments area) --> (itly, spain, greece, protgal, russia, poland , ukraine, belgium, france, germany)
+# SEPA (Single Euro payments area) --> (itly, spain, greece, protgal, russia, poland , ukraine, belgium, 
+    france, germany)
 
 #
