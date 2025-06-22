@@ -165,7 +165,7 @@
 #  Assert functions
     Assert functions are used to check whether the operation's output is True or False.
 
-# fields_views_get 
+# fields_views_get OR get_view
     fields_views_get has been renamed to get_view in Odoo 16.
     This method returns the fields_views of given views, along with the fields of the current model, 
     and optionally its filters for the given action.

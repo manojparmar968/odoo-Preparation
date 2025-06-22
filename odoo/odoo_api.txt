@@ -19,7 +19,7 @@
 # auth = 'none' /auth = 'public'
     1. This means that no authentication is required to access the route or method.
     2. The route can be accessed by anyone, regardless of whether they are logged in or not.
-    3.It is typically used for routes that are intended to be publicly accessible, 
+    3. It is typically used for routes that are intended to be publicly accessible, 
         such as APIs that do not require user authentication.
     Example:
         @http.route('/my/public/route', auth='none'/'public', type='json')
