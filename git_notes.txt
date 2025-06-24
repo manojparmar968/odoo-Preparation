@@ -1,0 +1,7 @@
+# Git Rebase
+    Rebase is another way to integrate changes from one branch to another.
+    Rebase compresses all the changes into a single patch.
+    Then it integares the patch onto the target branch.
+    unlike merging rebasing flattens the history because it transfer the completed work from one branch to another.
+
+    git rebase
