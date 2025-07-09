@@ -275,3 +275,29 @@
 @api.constrains('value1', 'value2') --> 
     1. are used in python code or we called python Constraints.
     2. When you need to validate some data before to be called create, write & unlink.
+
+# automated actions
+    Sending emails: Automatically send emails to customers or employees based on specific events, such as order 
+        confirmations or task assignments.
+    
+    Creating records: Automatically create records in other modules based on events in one module, such as 
+        creating a customer invoice when a sales order is confirmed.
+
+    Updating fields: Automatically update fields in records based on specific conditions, such as updating the 
+        status of a task when it is completed.
+
+    Executing custom code: Execute custom Python code to perform complex actions or integrate with external 
+        systems.
+
+# Handling performance issues in large databases.
+    Database optimization: Ensure your PostgreSQL database is properly indexed, tuned, and optimised for 
+        performance.
+
+    Code optimization: Write efficient code, avoid unnecessary database queries, and optimise loops and data 
+        structures.
+
+    Caching: Utilise caching mechanisms to store frequently accessed data in memory, reducing the need for 
+        repeated database queries.
+
+    Asynchronous tasks: Offload long-running tasks to background processes using Odoo’s asynchronous task 
+        queue, preventing them from blocking the main thread and impacting user experience.
