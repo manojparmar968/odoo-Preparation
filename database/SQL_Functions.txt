@@ -1,0 +1,8 @@
+1. Counts -> Counts the number of rows in a result.
+2. Sum -> Calculates the sum of values in a numeric column.
+3. AVG -> Calculates the average value of a numeric column.
+4. MIN -> Finds the minimum value of a column.
+5. MAX -> Finds the Maximum value in a column.
+6. FIRST -> Returns the first value in a set.
+7. LAST -> Returns the last value in a set.
+8. LEAD -> Returns the value of a column for a subsequent row within the result set.
