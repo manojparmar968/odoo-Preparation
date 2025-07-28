@@ -1,5 +1,21 @@
 1. No. of Working days in a week
-2. Sick Leave, casual leave & paid leave --> marke sure all are exist.
+2. Sick Leave (1.5 - 2), casual leave(2) & paid leave(2) --> make sure all are exist.
 3. in sallary make sure there is no variable exist.
-4. Notice perido not more than 30 days.
-5. sallary date not more than 7.
+4. Notice period not more than 30 days.
+5. sallary date not more than 7 of every Month.
+6. If relocation is taking place ask for the relocation Money or stay accomadation which is provided by the company.
+7. 
+
+
+WOrking ON IT --> Pending state
+
+1. Docker, and CI/CD pipelines.
+2. Purchases **
+3. Inventory **
+4. Sales **
+5. Accounting **
+6. CRM **
+7. HR **
+8. odoo Studio **
+
+Odoo Certification

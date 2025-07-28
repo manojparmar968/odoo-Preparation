@@ -1,2 +1,20 @@
-1. CRM 
-2. 
+The exam will cover the following subjects: 
+1. CRM **
+2. Website, 
+3. eCommerce, 
+4. Survey, 
+5. Marketing, 
+6. Sales **
+7. Purchases **
+8. Project, 
+9. Timesheet, 
+10. Accounting **
+11. Inventory **
+12. MRP, 
+13. HR **
+14. Spreadsheet, 
+15. POS and Studio **
+You’ll have 1.5 hours to complete this 125-questions exam.
+You must score (at least) 70% to PASS.
+Each CORRECT answer is worth 1 point.
+Each WRONG answer will cost you ½ point.
