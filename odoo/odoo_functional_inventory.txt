@@ -76,7 +76,7 @@
 
 # Inventory report --> that help you understand the status of your stock after adjustments.
 
-# Inventory Lead Time -->
+# Inventory Lead Time --> Requested Product, when it is expected to be received into inventory.
 
 
 # What is the difference between reordering and replenishment in Odoo?
@@ -91,8 +91,8 @@
             Cost of Product A is set 7rs,
             PO create with 10rs with 10kg but in inventory show 10kg with 70rs
 
-    2. Average Costing --> cost of items in inventory is calculated based on the average cost of all
-        available similar items in inventory.
+    2. Average Costing --> Method is calculated based on the average cost of all available similar items in 
+        inventory.
         Example:-
             Cost of an item in inventory divided by the number of item availble in stock.
 
@@ -114,7 +114,7 @@
     Consignment inventory is a supply chain model where a retailer sells a supplier's product, 
     but the supplier retains ownership until the product is sold. 
     The retailer only pays for the items they sell, and can return any unsold items to the supplier. 
-    The supplier, or consignor, receives payment from the retailer, or consignee, based on an agreed-upon 
+    The supplier(consignor), receives payment from the retailer(consignee), based on an agreed-upon 
     arrangement, such as a fixed fee or percentage of the sale price. 
 
 # Blanket Order?
@@ -130,8 +130,8 @@
     Serial number are good for products that require after sales services.
 
 # Multi step Routes
-    For One-Step Receipts, you can configure the system to directly move the goods from the Incoming location 
-    to the Stock location
+    One-Step Receipts: you can configure the system to directly move the goods from the Incoming location 
+        to the Stock location
 
     One-step process: When inventory is received from the vendor, it is immediately added to stock and made 
         available for use.​

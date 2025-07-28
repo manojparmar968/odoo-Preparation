@@ -97,7 +97,7 @@
     Example
         def _compute_(self):
 
-# Inverse: 
+# Inverse method: 
     The inverse function is mainly used to make the compute field editable. 
     A user can’t change a compute field value.
     An inverse function can be used to solve this problem.
@@ -121,7 +121,7 @@
     1. create --> Access to create records in the object.
     2. write (edit) --> Access to write records in the object.
     3. Read (view only) --> Access to read records in object.
-    4. delete --> Delete access to delete object.
+    4. unlink (delete) --> Delete access to delete object.
 
 # Groups --> user can have access under access rights. Group specify to menu or fields will display for
     particular security group.
@@ -265,14 +265,15 @@
 @api.depends('value') --> When a compute function is dependent on another record, then we have to use this 
         depends decorator.
     This decorator will be called when some changes happens in the specified fields.
-    @api.depends('value', 'value2')
-    def _compute_(self):
+    Example:
+        @api.depends('value', 'value2')
+        def _compute_(self):
 
 @api.onchange('value') --> is triggered only when one of the given attributes changes its value.
     @api.onchange('value')
     def _onchange_(self):
 
-@api.constrains('value1', 'value2') --> 
+@api.constrains('value1', 'value2') --> to check condition on create & update a record.
     1. are used in python code or we called python Constraints.
     2. When you need to validate some data before to be called create, write & unlink.
 
