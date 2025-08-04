@@ -446,3 +446,55 @@ for i in range(1,n+1):
 n = 5
 for x in range(n):
     print(" " *(n-x-1) + "*" * (2*x+1))
+
+
+# 28. a = "Hello World @@123" count upper case , lowe case and digits in python
+# ORD(): The ord function is used to get the Unicode code point (an integer) for a single character.
+# Upper case character: 65-90
+# lowe case character: 97-122
+# digits: 48-57
+a = "Hello World @@123"
+
+upper_count = 0
+lower_count = 0
+digit_count = 0
+
+for char in a: # Using Build in Function
+    if char.isupper():
+        upper_count += 1
+    elif char.islower():
+        lower_count += 1
+    elif char.isdigit():
+        digit_count += 1
+
+for char in a: # Without Using Build In Function
+    # Uppercase letters: ASCII 65 ('A') to 90 ('Z')
+    if 65 <= ord(char) <= 90:
+        upper_count += 1
+    # Lowercase letters: ASCII 97 ('a') to 122 ('z')
+    elif 97 <= ord(char) <= 122:
+        lower_count += 1
+    # Digits: ASCII 48 ('0') to 57 ('9')
+    elif 48 <= ord(char) <= 57:
+        digit_count += 1
+
+print("Uppercase letters:", upper_count)
+print("Lowercase letters:", lower_count)
+print("Digits:", digit_count)
+
+# 29. Find the number occurring number of times, lis = [1, 1, 2, 2, 3, 3, 3]
+
+lis = [1, 1, 2, 2, 3, 3, 3]
+c= 0
+rep = []
+rep_count = []
+
+for i in lis:
+    if i not in rep:
+        rep.append(i)
+        c= lis.count(i)
+        rep_count.append(c)
+print(rep)
+print(rep_count)
+
+print([[i, lis.count(i)] for i in set(lis)])

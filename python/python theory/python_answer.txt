@@ -212,3 +212,9 @@ sorted() -->
     1. Sorted will return a new sorted list leaving the original list unchanged.
     2. sorted accepts any iterable.
     3. print(sorted(nums)) # sorted() will returns a list
+
+ORD() -->
+    The ord function is used to get the Unicode code point (an integer) for a single character.
+    Upper case character: 65 - 90
+    lowe case character: 97 - 122
+    digits: 48 - 57
