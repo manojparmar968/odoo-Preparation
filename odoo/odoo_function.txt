@@ -100,6 +100,7 @@
 # create()
     method is used to create new records for the model. This method accepts a set of dictionary values &
     new records are initialized with it.
+    The create() method must return a recordset.
     def create(self, vals):
         vals = {}
         self.env[''].create(vals)
@@ -107,6 +108,7 @@
 # write()
     method is used to update the records inside the model with the provided values. This method accepts
     a set of dictionary values & the record is updated with these values.
+    write() method returns a boolean (True or False).
     def write(self, vals):
         self.env[].write(vals)
 
