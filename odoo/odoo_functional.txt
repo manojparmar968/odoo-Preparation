@@ -110,6 +110,11 @@
         @api.depends('value')
         def _compute_(self)
 
+# env --> 
+    1. Access to the current user (uid)
+    2. Access to the current model context (context)
+    3. Access to the database cursor (cr)
+    4. Access to other models (model registry)
 
 # ref in odoo --> returns the record corresponding to an xml id.
     self.env.ref('module_name.xml external id').id
