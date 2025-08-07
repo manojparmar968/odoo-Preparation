@@ -143,8 +143,8 @@
     .sorted('date_start', reverse=True)
 
 # context
-    Context is used to pass parameter across the method calls from xml to python many of odoo method 
-    change their value based on the keys inside the context.
+    Context is used to pass parameter across the method calls from xml to python many of odoo method change 
+    their value based on the keys inside the context.
     <filter string="" name="" context="{'':''}"/> # Filter
     <field string="" name="" context="{'':''}"/> # fields
     <field name="context">{}</field> # model="ir.actions.act_window"
@@ -153,8 +153,8 @@
 
 # with_context()
     .with_context() helps to send some extra context along with current environment. 
-    You can use .with_context() with ORM methods like search(), browse(), read().
-    is used to add or update keys of the context.
+    You can use .with_context() with ORM methods like search(), browse(), read() is used to add or update keys 
+    of the context.
                     OR                      
     This method generates a new recordset with an additional context.
     self.with_context(force_delete=True)
