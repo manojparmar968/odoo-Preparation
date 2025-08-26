@@ -181,6 +181,13 @@
                 Odoo uses a intermediate table to handle the many-to-many relationship.
             2. _ids
         Example:-
+            _ids = fields.Many2many(
+                'image.document',               # comodel
+                'product_template_image_rel',   # relation table name
+                'product_template_id',          # column pointing to this model
+                'image_document_id',            # column pointing to the comodel
+                string='Document Images',
+            )
 
 # comodel --> It is the name of the target model to which we want to create the relational field.
 

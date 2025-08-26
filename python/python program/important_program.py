@@ -9,9 +9,7 @@ for i in range(len(n)):
     for j in range(i+1, len(n)):
         if n[i] >= n[j]: # Assending order
             n[i],n[j] = n[j],n[i]
-
-            # OR
-
+        # OR
 index = len(n)-1 # Using Bubble Sort Algorithm
 for i in range(index):
     for j in range(index-i):
@@ -38,8 +36,13 @@ s1 = ["a", "b", "a", "c", "c"] # o/p = ['a', 'b', 'c']
 #Remove repeat character for string
 s = "innage" 
 print((list(set(s))))
+        # OR
+for i in s:
+    if i not in result:
+        result += i
+print(result)
 
-# Remove repeated number from list and count a number how many times apper.
+# Remove repeated number from list and count a number how many times apper and also find the duplicate list.
 n=[5,2,1,4,3,2,8,4,2,1,2,0]
 
 # using SET

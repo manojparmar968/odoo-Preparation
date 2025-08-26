@@ -36,6 +36,15 @@
 
     Inventory > Configuration > Settings > operations > Batch Picking.
 
+# Batch transfer VS Batch Picking
+    Batch Transfer:
+        Groups orders together
+        can be used for picking, internal transfers, or deliveries
+    Batch Picking
+        One of the three picking methods available in odoo i.e Bath, wave & Cluster.
+        Physically gathering items for multiple orders at Once
+        Behind the scenes, it's handled by "Batch Transfer" operations
+
 # DropShipping
     1. DropShipping is method for fullfilling the order.
     2. where the product is delivered to a customer directly from the vendor's store is called DropShipping.
