@@ -103,7 +103,7 @@ for i in l:
         dd[i] += 1
 print(dd)
 
-# 18. n = 123456 Reverse a number & Reverse a string s = 'Manoj'
+# n = 123456 Reverse a number & Reverse a string s = 'Manoj'
 n = 123456 # Reverse a number
 rev = 0
 while (n>0):
@@ -119,7 +119,7 @@ for i in s:
 print(r)
 print(s[::-1])
 
-# 24. from given list arr = [-1,0,1,2,3,5,6], find two values which sum is equal to sum = 3.
+# from given list arr = [-1,0,1,2,3,5,6], find two values which sum is equal to sum = 3.
 arr = [-1,0,1,2,3,5,6]
 sum = 3
 print(len(arr)-1,len(arr))
@@ -134,7 +134,7 @@ target = 14
 # 28. a = "Hello World @@123" count upper case , lowe case and digits in python
 # ORD(): The ord function is used to get the Unicode code point (an integer) for a single character.
 # Upper case character: 65-90
-# lowe case character: 97-122
+# lower case character: 97-122
 # digits: 48-57
 a = "Hello World @@123"
 
@@ -164,3 +164,43 @@ for char in a: # Without Using Build In Function
 print("Uppercase letters:", upper_count)
 print("Lowercase letters:", lower_count)
 print("Digits:", digit_count)
+
+# a. Bubble Sort
+def bubble_sort(arr):
+    index = len(arr)-1
+    for i in range(index):
+        for j in range(index - i):
+            if arr[j] > arr[j+1]:
+                arr[j],arr[j+1] = arr[j+1],arr[j]
+    return arr
+arr = [32,2,5,3,6,7]
+print(bubble_sort(arr))
+
+# Binary Search
+def binary_search(arr,starting_index,last_index,search_number):
+    while(starting_index <= last_index):
+        middle_number = (starting_index + last_index)//2
+        if search_number > arr[middle_number]:
+            starting_index = middle_number + 1
+        elif search_number < arr[middle_number]:
+            last_index = middle_number - 1
+        elif search_number == arr[middle_number]:
+            return middle_number
+    return -1
+arr = [2, 3, 4,5,10,14,20,30,40]
+search_number = 20
+starting_index = 0
+last_index = len(arr)-1
+find = binary_search(arr,starting_index,last_index,search_number)
+# print(find)
+
+# Linear Search
+def linear_search(arr,x):
+    for i in range(len(arr)):
+        if arr[i] == x:
+            return i
+    return -1
+
+arr = [10,20,80,30,60,50,110,100,130,170]
+x = 110
+print(linear_search(arr,x))

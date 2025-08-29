@@ -13,9 +13,11 @@ WOrking ON IT --> Pending state
 2. Purchases **
 3. Inventory **
 4. Sales **
-5. Accounting **
-6. CRM **
+5. Accounting ***
+6. CRM ***
 7. HR **
 8. odoo Studio **
+9. Website
+10. Manufacturing(MRP)
 
 Odoo Certification
