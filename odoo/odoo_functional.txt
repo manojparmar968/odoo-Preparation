@@ -18,8 +18,10 @@
     1. AbstractModel (models.AbstractModel) --> is used to reduce the code & implement common logic in
         reusable component.
         Abstract models don’t have corresponding database tables.
+
     2. models (models.Model) --> representation of a database table. It defines the structure of the data, 
-        the fields, and the business logic.
+        fields, and the business logic.
+
     3. TransientModel (models.TransientModel) --> where data is stored temporary & used for wizards.
 
 # rec_name --> is an attribute used to define the string representation of a record in the 
@@ -71,7 +73,7 @@
         1. Form view    2. Tree (list) view     3. Kanban view 
         4. Calendar, Pivot, Gantt, Graph, etc.
     Controller (business logic OR Request Handling Layer) --> is invoked by URL. It uses model & invokes view.
-        Handles web requests, typically for web controllers or APIs.
+        It Handles web requests, typically for web controllers or APIs.
         1. Website apps & Web portals
         2. Custom REST APIs
 
@@ -91,7 +93,7 @@
         'report_type' represents the type of the report whether it is a PDF report (qweb-pdf) or HTML 
         report (qweb-html).
 
-    6. Automated Actions (ir.cron) --> actions that triggered automatically on a predefined time interval.
+    6. Automated Actions (ir.cron) --> that triggered automatically on a predefined time interval.
 
 # Onchange/@api.onchange()
     is triggered only when one of the given attributes changes its value.
@@ -291,7 +293,7 @@
     It allow to be polite when migrating code.
 
 @api.depends('value') --> When a compute function is dependent on another record, then we have to use this 
-        depends decorator.
+    depends decorator.
     This decorator will be called when some changes happens in the specified fields.
     Example:
         @api.depends('value', 'value2')
