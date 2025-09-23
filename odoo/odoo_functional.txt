@@ -38,11 +38,13 @@
 
     2. Extension inheritance
         Extension inheritance we will only use the _inherit attribute & do not use _name attribute.
+        Use _inherit when modifying or extending a model.
         _inherit = ['account.move']
 
     3. Delegation inheritance
         Delegation inheritance we use _inherits attribute, this type of inheritance is used if you want
         to sink another model to your current model without affecting the views.
+        Use _inherits when creating a model that reuses another model's fields.
         _name = "account.payment"
         _inherits = {'account.move': 'move_id'}
         move_id = fields.Many2one(comodel_name='account.move')

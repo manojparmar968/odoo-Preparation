@@ -43,3 +43,17 @@
     3.Redirection => 3**
     4.Client Error => 4**
     5.Server Error => 5**
+
+1. Pagination It is wrong to send 10,0000 records at a time.
+    instead, break it into 50-100 items per page, so user will get quick response.
+2. (Asynchronous) Async Logging it is slow to write logs on every request.
+    Queue the logs in memory & when the background thread is running it will keep writing it.
+3. Caching (Rediss,)
+    Why fetch same data from the DB again & again store it in a cache like redis & check the cache in every 
+    request, if it is available in the cache return it from there otherwise, access it from the database store 
+    it in the cache & then return the user.
+4. Compression
+    compress json or text with gzip or Brotli
+5. connection Pooling (PgBouncer)
+    connection Pooling every time opening or closing DB connection is a very expensive process use connection
+    Pooling ready connections will always be available that means the query will be executed immediately.

@@ -18,8 +18,7 @@
 
 # search()
     The search method is used to search records with in the given model based on the domain 
-    passed as the argument.
-    It returns a recordset of IDs that match the domain (search criteria) provided.
+    passed as the argument & It returns a recordset of IDs.
                 OR
     .search([]) method is used to find records that match certain conditions in the database.
     It's useful when you want to filter records based on certain criteria and then work with them.
