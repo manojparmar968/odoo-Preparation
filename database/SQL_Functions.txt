@@ -1,8 +1,66 @@
 1. Counts -> Counts the number of rows in a result.
+    SELECT COUNT(*) AS total_patients
+    FROM patients
+    WHERE YEAR(birth_date) = 2010;
+
+    SELECT COUNT(*) AS total_admissions
+    FROM admissions;
+
+    SELECT count(first_name) AS total_patients
+    FROM patients
+    WHERE birth_date >= '2010-01-01' AND birth_date <= '2010-12-31'
+
+    SELECT count(first_name) AS total_patients
+    FROM patients
+    WHERE birth_date between '2010-01-01' AND '2010-12-31'
+
 2. Sum -> Calculates the sum of values in a numeric column.
 3. AVG -> Calculates the average value of a numeric column.
 4. MIN -> Finds the minimum value of a column.
 5. MAX -> Finds the Maximum value in a column.
+    SELECT first_name, last_name, height
+    FROM patients
+    WHERE height = (SELECT max(height) FROM patients)
+
+    SELECT first_name, last_name, MAX(height) AS height
+    FROM patients;
+
 6. FIRST -> Returns the first value in a set.
 7. LAST -> Returns the last value in a set.
 8. LEAD -> Returns the value of a column for a subsequent row within the result set.
+9. IS -> 
+    WHERE field_name IS null;
+
+10. IN ->
+    WHERE field_name IN (1, 45, 534, 879, 1000);
+
+11. ILIKE -> It does not distinguish between uppercase and lowercase letters. Thus, 'Apple' ILIKE 'a%' would 
+    return true because 'A' and 'a' are treated as equivalent for matching purposes.
+        WHERE field_name ILIKE 'Ke%';
+
+12. LIKE -> This means that it distinguishes between uppercase and lowercase letters in the string and the 
+    pattern. For instance, 'Apple' LIKE 'a%' would return false because 'A' is not the same as 'a'.
+        WHERE field_name LIKE 'C%';
+13. BETWEEN ->
+        WHERE field_name BETWEEN 100 AND 120;
+
+14. concatinated ->
+    CONCAT(first_name, ' ', last_name) AS full_name
+    Note:- full_name field is not exist in DB but it will used to show a new value.
+                                OR
+    first_name || ' ' || last_name
+
+15. JOIN -> 
+    province_name FROM patients JOIN province_names ON province_names.province_id = patients.province_id;
+    Note:- province_name is not a field value it is used to show the result that is province_names
+
+16. DISTINCT ->
+    SELECT DISTINCT(city) AS unique_cities
+    FROM patients
+    WHERE province_id = 'NS';
+
+17. GROUP BY ->
+    SELECT city
+    FROM patients
+    GROUP BY city
+    HAVING province_id = 'NS';
