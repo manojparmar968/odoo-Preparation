@@ -21,6 +21,10 @@
 
     2. models (models.Model) --> representation of a database table. It defines the structure of the data, 
         fields, and the business logic.
+        Model (data) is a class that represents the data.
+        Define database tables (fields)
+        Business logic (methods, constraints, computed fields)
+        ORM interaction (create, read, write, delete)
 
     3. TransientModel (models.TransientModel) --> where data is stored temporary & used for wizards.
 
