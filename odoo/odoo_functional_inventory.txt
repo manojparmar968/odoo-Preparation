@@ -41,7 +41,7 @@
         Groups orders together
         can be used for picking, internal transfers, or deliveries
     Batch Picking
-        One of the three picking methods available in odoo i.e Bath, wave & Cluster.
+        One of the three picking methods available in odoo i.e Batch, wave & Cluster.
         Physically gathering items for multiple orders at Once
         Behind the scenes, it's handled by "Batch Transfer" operations
 
