@@ -15,6 +15,8 @@
     WHERE birth_date between '2010-01-01' AND '2010-12-31'
 
 2. Sum -> Calculates the sum of values in a numeric column.
+    SUM(Gender = 'M') as male_count
+
 3. AVG -> Calculates the average value of a numeric column.
 4. MIN -> Finds the minimum value of a column.
 5. MAX -> Finds the Maximum value in a column.
@@ -41,6 +43,12 @@
 12. LIKE -> This means that it distinguishes between uppercase and lowercase letters in the string and the 
     pattern. For instance, 'Apple' LIKE 'a%' would return false because 'A' is not the same as 'a'.
         WHERE field_name LIKE 'C%';
+        WHERE first_name LIKE 's____%s'; 
+        Note:- 's%s' is used for starting or ending matching character.
+        ___ is used for between len char or used like this ---> AND len(first_name) >= 6;
+        LIKE 's%' -->  Matching staring charcter
+        LIKE '%s' -->  Matching end charcter
+
 13. BETWEEN ->
         WHERE field_name BETWEEN 100 AND 120;
 
@@ -54,13 +62,25 @@
     province_name FROM patients JOIN province_names ON province_names.province_id = patients.province_id;
     Note:- province_name is not a field value it is used to show the result that is province_names
 
-16. DISTINCT ->
-    SELECT DISTINCT(city) AS unique_cities
-    FROM patients
-    WHERE province_id = 'NS';
+16. DISTINCT -> removes duplicate rows from a result set.
+    Note:- return only distinct (different) values.
+    SELECT DISTINCT field_name FROM table_name;
+        SELECT DISTINCT(city) AS unique_cities
+        FROM patients
+        WHERE province_id = 'NS';
+
+        SELECT
+        DISTINCT YEAR(birth_date) AS birth_year
+        FROM patients
+        ORDER BY birth_year;
 
 17. GROUP BY ->
-    SELECT city
-    FROM patients
-    GROUP BY city
-    HAVING province_id = 'NS';
+        SELECT city
+        FROM patients
+        GROUP BY city
+        HAVING province_id = 'NS';
+
+        SELECT first_name
+        FROM patients
+        GROUP BY first_name
+        HAVING COUNT(first_name) = 1
