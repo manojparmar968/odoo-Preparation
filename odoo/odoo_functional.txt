@@ -22,9 +22,9 @@
     2. models (models.Model) --> representation of a database table. It defines the structure of the data, 
         fields, and the business logic.
         Model (data) is a class that represents the data.
-        Define database tables (fields)
-        Business logic (methods, constraints, computed fields)
-        ORM interaction (create, read, write, delete)
+        Define database tables i.e fields
+        Business logic i.e methods, constraints, computed fields
+        ORM interaction i.e create, read, write, delete
 
     3. TransientModel (models.TransientModel) --> where data is stored temporary & used for wizards.
 
@@ -69,11 +69,11 @@
 
 # MVC (Model-View-Controller) --> which helps structure and organize the application into separate components: 
     Model (data) --> is a class that represents the data.
-        1. Define database tables (fields)
-        2. Business rules (methods, constraints, computed fields)
-        3. ORM interaction (create, read, write, delete)
+        1. Define database tables i.e fields
+        2. Business rules i.e methods, constraints, computed fields
+        3. ORM interaction i.e create, read, write, delete
     View (user interface OR Presentation Layer) --> is to present data that is in model.
-        Defines the user interface and how data is displayed.
+        View Defines the user interface and how data is displayed.
         1. Form view    2. Tree (list) view     3. Kanban view 
         4. Calendar, Pivot, Gantt, Graph, etc.
     Controller (business logic OR Request Handling Layer) --> is invoked by URL. It uses model & invokes view.
