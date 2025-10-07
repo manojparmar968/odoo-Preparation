@@ -218,3 +218,6 @@ ORD() -->
     Upper case character: 65 - 90
     lowe case character: 97 - 122
     digits: 48 - 57
+
+zip() --> is used to pair elements from two or more iterables (like lists or tuples) together & returns an 
+    iterator.

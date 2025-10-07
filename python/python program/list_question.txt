@@ -36,6 +36,10 @@
 27. From given list my_list = [[0, 1, 2, 3] for i in range(2)],  what is the output and print the output 3
 28. a = "Hello World @@123" count upper case , lowe case and digits in python
 29. Find the number, occurring number of times, lis = [1, 1, 2, 2, 3, 3, 3]
+30. 
+  l1 = [1,2,3]
+  l2 = [1,2,3,4]
+  op = [2, 4, 6, 4]
 15. * * * * *
     * * * *
     * * *     n = 5

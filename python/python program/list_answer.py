@@ -498,3 +498,10 @@ print(rep)
 print(rep_count)
 
 print([[i, lis.count(i)] for i in set(lis)])
+
+# 30. 
+l1 = [1,2,3]
+l2 = [1,2,3,4]
+result = [a + b for a, b in zip(l1, l2)]
+result += l2[len(l1):]
+print(result)

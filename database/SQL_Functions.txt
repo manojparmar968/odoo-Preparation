@@ -3,9 +3,6 @@
     FROM patients
     WHERE YEAR(birth_date) = 2010;
 
-    SELECT COUNT(*) AS total_admissions
-    FROM admissions;
-
     SELECT count(first_name) AS total_patients
     FROM patients
     WHERE birth_date >= '2010-01-01' AND birth_date <= '2010-12-31'
@@ -26,6 +23,10 @@
 
     SELECT first_name, last_name, MAX(height) AS height
     FROM patients;
+
+    SELECT (MAX(weight) - MIN(weight)) AS weight_delta
+    FROM patients
+    WHERE last_name = 'Maroni';
 
 6. FIRST -> Returns the first value in a set.
 7. LAST -> Returns the last value in a set.
@@ -53,7 +54,7 @@
         WHERE field_name BETWEEN 100 AND 120;
 
 14. concatinated ->
-    CONCAT(first_name, ' ', last_name) AS full_name
+    CONCAT(upper(first_name), ' ', lower(last_name)) AS full_name
     Note:- full_name field is not exist in DB but it will used to show a new value.
                                 OR
     first_name || ' ' || last_name
@@ -61,6 +62,10 @@
 15. JOIN -> 
     province_name FROM patients JOIN province_names ON province_names.province_id = patients.province_id;
     Note:- province_name is not a field value it is used to show the result that is province_names
+        SELECT first_name, last_name, count(*) as admissions_total
+        from admissions a
+        join doctors ph on ph.doctor_id = a.attending_doctor_id
+        group by attending_doctor_id
 
 16. DISTINCT -> removes duplicate rows from a result set.
     Note:- return only distinct (different) values.
@@ -75,6 +80,9 @@
         ORDER BY birth_year;
 
 17. GROUP BY ->
+    Note:-
+        1. Group By can be applied more than one field based on condition.
+
         SELECT city
         FROM patients
         GROUP BY city
@@ -84,3 +92,22 @@
         FROM patients
         GROUP BY first_name
         HAVING COUNT(first_name) = 1
+
+        SELECT province_id, SUM(height) AS sum_height
+        FROM patients
+        GROUP BY province_id
+        HAVING sum_height >= 7000
+
+18. ORDER BY ->
+        SELECT allergies, COUNT(*) AS total_diagnosis
+        FROM patients
+        WHERE allergies IS NOT NULL
+        GROUP BY allergies
+        ORDER BY total_diagnosis DESC LIMIT 1
+
+19. SELECT first_name, last_name, 'Patient' as role FROM patients
+    union all
+select first_name, last_name, 'Doctor' from doctors;
+
+Note:-
+    1. 
