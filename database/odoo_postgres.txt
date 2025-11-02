@@ -70,3 +70,7 @@ To Run odoo
 
 To Update Odoo Module
     ./odoo-bin -c file_name.conf -d db_name -U all/module_name
+
+odoo19
+    python odoo-bin -c basic19.conf -p 8019 --save #windows
+    python odoo-bin -c basic19.conf --http-port=8019 --save #windows
