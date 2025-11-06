@@ -221,3 +221,8 @@ ORD() -->
 
 zip() --> is used to pair elements from two or more iterables (like lists or tuples) together & returns an 
     iterator.
+
+Join() --> method is a string method used to concatenate elements of an iterable (like a list or tuple) into a 
+    single string.
+
+index --> The concept of indexing elements in sequences, for used do as .index
