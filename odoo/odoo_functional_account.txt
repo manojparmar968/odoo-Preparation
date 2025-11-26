@@ -30,6 +30,7 @@
     They can apply automatically, depending rules & added manually.
 
     Accounting > Configuration > Accounting > Fiscal Position.
+    India --> April 1st TO March 31st
 
 # reconciling/Bank reconciliation
     Bank reconciliation is the process of matching your bank transactions with your business records, 
