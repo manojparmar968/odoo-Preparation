@@ -34,25 +34,27 @@
     Batch Picking is the process of selecting a group of products for meeting the requirement of order.
     The order can be small batches or large batches.
     Batch picking enables a single picker to handle multiple orders at once, reducing the number of times 
-        needed to navigate to a warehouse location. When picking in batches, orders are grouped and 
-        consolidated into a picking list. After the picking, the batch is taken to an output location, 
-        where the products are sorted into their respective delivery packages.
+        needed to navigate to a warehouse location. 
+    When picking in batches, orders are grouped and consolidated into a picking list. 
+    After the picking, the batch is taken to an output location, where the products are sorted into their 
+        respective delivery packages.
 
     Inventory > Configuration > Settings > operations > Batch Picking.
 
 # Cluster picking
     Cluster picking is an advanced picking method that combines the efficiency of batch picking with 
-        immediate sorting during the picking process. It is best suited for warehouses with high order 
-        volumes where organization and speed are critical.
+        immediate sorting during the picking process. 
+    It is best suited for warehouses with high order volumes where organization and speed are critical.
 
 # Wave transfers
     While a batch transfer is a group of several pickings, a wave transfer contains certain parts of 
-        different pickings. In Odoo, wave transfers are batch transfers with an extra step: transfers are 
-        split before being grouped in a batch.
+        different pickings. 
+    wave transfers are batch transfers with an extra step: transfers are split before being grouped in a batch.
     Wave picking is ideal for warehouses that need to optimize the handling of high order volumes while 
-        managing complex picking criteria. With wave transfers, orders are grouped into waves based on 
-        factors like product location, category, or scheduled shipping times. Each wave is assigned to a 
-        different employee for the most efficient execution.
+        managing complex picking criteria. 
+    With wave transfers, orders are grouped into waves based on factors like product location, category, 
+        or scheduled shipping times. 
+    Each wave is assigned to a different employee for the most efficient execution.
 
 # Batch transfer VS Batch Picking
     Batch Transfer:

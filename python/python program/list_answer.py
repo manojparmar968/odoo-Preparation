@@ -501,7 +501,7 @@ print([[i, lis.count(i)] for i in set(lis)])
 
 # 30. 
 l1 = [1,2,3]
-l2 = [1,2,3,4] # ans = [1,2,3,4]
+l2 = [1,2,3,4] # ans = [2,4,6,4]
 result = [a + b for a, b in zip(l1, l2)]
 result += l2[len(l1):]
 print(result)
