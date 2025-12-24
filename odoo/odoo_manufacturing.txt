@@ -2,3 +2,26 @@
     be define.
 
     MRP > settings > operations > enable sub contracting.
+
+# BOM --> A BoM is a list of the components and operations required to manufacture a product.
+    Components --> specify components used to manufacture the product.
+    Operations --> specify instructions for production and register time spent on an operation.
+        Work Center --> select existing locations to perform the operation.
+    Miscellaneous --> contains more BoM configurations to customize procurement, calculate costs, and define 
+        how components are consumed.
+
+# One-step manufacturing -->  Odoo creates a manufacturing order (MO), but does not generate transfers for the 
+    movement of components out of inventory or finished products into stock. Inventory counts still update 
+    based on the number of components used and products manufactured, but the act of transferring them to and 
+    from inventory is not tracked.
+
+# Two-step manufacturing --> Odoo creates a manufacturing order (MO) and a pick components transfer, but does 
+    not generate a transfer for the movement of finished products into stock. Inventory counts still update 
+    based on the number of products manufactured, but the act of transferring them to and from inventory is 
+    not tracked.
+
+# Three-step manufacturing --> Odoo creates a pick components transfer, a manufacturing order (MO), and a 
+    store finished products transfer, and updates inventory counts based on the number of components removed, 
+    and finished products created.
+
+# 

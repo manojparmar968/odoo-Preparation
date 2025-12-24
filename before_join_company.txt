@@ -21,3 +21,28 @@ WOrking ON IT --> Pending state
 10. Manufacturing(MRP)
 
 Odoo Certification
+
+
+
+
+
+Return of investment(ROI) = (Net Profit/cost of investment)*100
+                          = (Present value - cost of investment(COI)/ cost of investmentCOI)*100
+
+Return on Advertising spend(ROAS) = Revenue from ADS/cost of ADS
+
+working capital
+    networking capital = current assets - current liabilities
+    working capital ratio = current assets/current liabilities
+Profit margin
+    Net Profit margin = (net profit/net revenue)*100
+    gross Profit margin = (revenue -COGS/revenue)*100
+
+Earning before interest, tax,depreciation & amortization(EDITDA)
+    EDITDA = operating income + depreciation + amortization
+
+break even point(BEP) 
+    Break Even Point (Units) = Fixed costs/selling price per unit OR variable cost per unit
+
+Revenue Run Rate(RRR)
+    RRR = Revenue for Period * Number of periods in year

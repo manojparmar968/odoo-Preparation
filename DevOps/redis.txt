@@ -1,0 +1,1 @@
+# Redis Server --> A Redis server is an open-source, in-memory, key-value data store and cache.
