@@ -1,1 +1,38 @@
-# Redis Server --> A Redis server is an open-source, in-memory, key-value data store and cache.
+# Redis Server
+    A Redis server is an open-source, in-memory, key-value data store and cache.
+    In memory data structure store that can be used as a database, cache and message broker
+    redis supports various data structure such as strings, hashes, lists, sets, sorted sets, bitmaps,
+        hyperloglogs and geospatial indexes.
+    Port No. -
+
+# Feature of Redis
+    In Memory Storage
+        Fast read & Write operations
+        Ideal for real time requirements
+    Persistence
+        Provide option to dump data to disk
+    Data structure
+        Support various Strings, Hashset, List, Bitmap etc
+    Replication
+        Redis supports master slave replication, allowing data to be replicated to multiple servers for 
+            redundancy & failOver.
+    Pub/Sub Messaging
+        Redis can act as a message broker using its publish/subscribe capabilities, allowing for real-time 
+            applications.
+
+# Redis Types
+    String --> Strings can store any type of data, such as text or binary data(images or serialized objects).
+        commands
+            SET key value
+            GET key
+            INCR key (increments the integer value of a key by one)
+            APPEND key value
+    Hashes --> A collection of key value pair where keys & values are both strings.
+            Ideal for representing objects.
+        commands
+            HSET key field value
+            HGET key field
+            HGETALL key
+    Lists --> An ordered collection of strings. You can add elements to the head(left) or tail(right) of the list.
+        commands
+    Set --> An unordered collection of unique strings. Useful for storing unique elements.
