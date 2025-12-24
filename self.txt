@@ -1,0 +1,21 @@
+Hi, my name is Manoj Parmar. I have 3.2 years of experience in Odoo development,
+where I’ve worked on customizing modules, implementing business logic, and supporting
+end-to-end ERP solutions for clients.
+
+Good morning Sir/Madam,
+
+It is my pleasure to introduce myself.
+My name is Manoj Parmar, and I am 30 years old. I live in the Delhi NCR region and belong
+to a family of six.
+
+I have completed my Bachelor’s degree in B.Tech from GLA University, Mathura. I have 3.2
+years of experience working with Odoo, specializing in the development, customization,
+and maintenance of Odoo applications. My expertise includes module development, API
+customization, business process automation, and system optimization. I am passionate
+about delivering efficient and scalable ERP solutions that align closely with business
+requirements.
+
+Previous Project i worked on --
+
+That’s all about me.
+Thank you for your time.
