@@ -1,5 +1,9 @@
+# RabbitMQ --> is an open-source message broker that acts as a middleman for applications, enabling them to 
+    communicate asynchronously by sending and receiving messages, often using the 
+    AMQP(Advanced Message Queuing Protocol) protocol.
+    Port No. 5672
+
 pip install pika
-Port No. 5672
 
 #!/usr/bin/env python
 import pika
