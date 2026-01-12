@@ -226,3 +226,6 @@ Join() --> method is a string method used to concatenate elements of an iterable
     single string.
 
 index --> The concept of indexing elements in sequences, for used do as .index
+
+enumerate() --> adds a counter as the key of the enumerate object.
+    Other words it gives the index & value while iterating over the list, tuple or string.

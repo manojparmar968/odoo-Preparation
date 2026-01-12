@@ -40,6 +40,10 @@
   l1 = [1,2,3]
   l2 = [1,2,3,4]
   op = [2, 4, 6, 4]
+31. From given string find the longest sub string.
+  s = "abcababbaa" # string
+  Result sub string with length 'abc', 3
+
 15. * * * * *
     * * * *
     * * *     n = 5

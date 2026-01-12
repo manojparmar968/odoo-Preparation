@@ -505,3 +505,19 @@ l2 = [1,2,3,4] # ans = [2,4,6,4]
 result = [a + b for a, b in zip(l1, l2)]
 result += l2[len(l1):]
 print(result)
+
+# 31.From given string find the longest sub string.
+s = "abcababbaa"
+last_seen = {}
+start = 0
+max_len = 0
+longest = ""
+
+for i, ch in enumerate(s):
+    if ch in last_seen and last_seen[ch] >= start:
+        start = last_seen[ch] + 1
+    last_seen[ch] = i
+    if i - start + 1 > max_len:
+        max_len = i - start + 1
+        longest = s[start:i+1]
+print(longest,max_len)
