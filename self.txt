@@ -19,3 +19,26 @@ Previous Project i worked on --
 
 That’s all about me.
 Thank you for your time.
+
+Third Party Integration
+    Juspay & Razerpay --> Payment GateWay
+    Authbridge --> Pan Card Verification,
+    Digilocker --> AdharCard Verification, 
+    Cron Jobs Runing Through AWS.
+    Wati, Whatsapp Integration.
+    Image Upload to S3 Bucket, SMS Integration, Push Notification
+    XLSX report's without using 3rd party module
+
+Project NewYork --> 
+    UniSex Sallon having His Own Products
+    Wants to customized POS Screen based on permission like admin, user, employee( having different 
+        permission based on hierarchy)
+    From single screen wants to control all the flow like 
+        listing products, edit products, manage the inventory and its operation, reports, purchase, user data,
+        discounts, couppons each & thing from one screen
+    but menus and options will show based on given permission
+    client also have its own development team as well they just need a module based on his need and they can 
+        install on his system.
+
+Project India -->
+    

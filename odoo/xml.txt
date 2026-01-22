@@ -1,0 +1,14 @@
+
+<tree default_order="date desc">
+<field name="int_value" options="{'type': 'number'}" />
+<field name="int_value" options="{'type': 'number', 'step': 100}" />
+<field name="int_value" options='{"format": false}' />
+<field name="factor" digits="[42,5]" />
+hide_trailing_zeros: hide zeros to the right of the last non-zero digit, e.g. 1.20 becomes 1.2 
+    (false by default).
+    <field name="int_value" options="{'hide_trailing_zeros': true}" />
+widget
+    widget="progressbar"
+filter_domain that overrides the domain
+
+default_order="name desc">

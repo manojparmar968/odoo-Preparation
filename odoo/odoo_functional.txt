@@ -37,12 +37,12 @@
     3. Transient model is used for them.
 
 # Different types of inheritance in odoo
-    1. Classical Inheritance --> The initial type of inheritance is the classic inheritance where we use
-        both _name & _inherit attributes together.
+    1. Classical Inheritance/class Inheritance --> The initial type of inheritance is the class 
+        inheritance where we use both _name & _inherit attributes together.
         _name = ''
         _inherit = ''
 
-    2. Extension inheritance
+    2. Extension inheritance/Prototype inheritance
         Extension inheritance we will only use the _inherit attribute & do not use _name attribute.
         Use _inherit when modifying or extending a model.
         _inherit = ['account.move']
@@ -287,6 +287,9 @@
     4. implementation
     5. Testing
     6. Maintainance
+
+# decorators --> is used to add functionality to an existing code this is called meta programing
+    because a part of the program tries to modify another part of the program at compile time.
 
 # @api.multi --> self will be the current recordset without iteration.
     Note:-
