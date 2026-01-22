@@ -29,6 +29,7 @@
     ], offset=0, limit=1, order=0)
 
 # _name_search()
+    controls how records are searched in many2one fields
     _name_search is responsible for searching the specific records by some field values in 
     relational field.
     def _name_search(self, name, domain=None, operator='ilike', limit=None, order=None):
@@ -36,10 +37,18 @@
         return super()._name_search(name, domain, operator, limit, order)
 
 # search_read()
+    search_read() combines search() + read() into a single call.
+        Searches for records matching a domain
+        Reads specified fields
+        Returns a list of dictionaries (not recordsets)
     search_read will return the list of dictionary containing the values of fields.
-    request.env['model.name'].search_read([], ['name'])
-    .search_read([],[])
-    self.env[model_name].search_read([], ['create_uid'])
+    records = self.env['model.name'].search_read(domain=[], fields=[], offset=0, limit=None, order=None)
+    When to use search_read()
+        Controllers (@http.route)
+        JSON-RPC calls
+        Web / JS data fetching
+        Simple read-only operations
+        Performance-sensitive queries
 
 # search_get() 
     Method is primarily designed to work with many2one fields or in scenarios where you want to customize 
@@ -86,11 +95,19 @@
     self.mapped("company_id")
 
 # name_get()
-    name_get() function returns a list of pairs (id, text_repr) for each records and the return
-    type is a list(tuple).
+    controls how records are displayed everywhere in the UI & many2one fields, dropdowns, search results, etc.
+    return type is a list(tuple).
+    Where name_get is used
+        Many2one dropdowns
+        Search views
+        Kanban headers
+        Smart buttons
     def name_get(self):
         return list(zip(records._ids, records.mapped('display_name')))
         return [(record.id, record.display_name) for record in self]
+    Related methods
+        name_search → controls how records are searched in many2one fields
+        _rec_name → defines which field is used by default as the name
 
 # exists()
     It returns a record set which contains only records that exist in the database, or it can also be
@@ -105,8 +122,8 @@
         self.env[''].create(vals)
 
 # write()
-    method is used to update the records inside the model with the provided values. This method accepts
-    a set of dictionary values & the record is updated with these values.
+    method is used to update the records inside the model with the provided values. 
+    This method accepts a set of dictionary values & the record is updated with these values.
     write() method returns a boolean (True or False).
     def write(self, vals):
         self.env[].write(vals)
