@@ -1,0 +1,61 @@
+db:
+image: postgres:16
+ports:
+    - "5432:5432"
+environment:
+    - POSTGRES_USER=odoo
+    - POSTGRES_PASSWORD=odoo
+    - PGDATA=/var/lib/postgresql/data/pgdata
+volumes:
+    - odoo-db-data:/var/lib/postgresql/data
+
+db: is the name of the container.
+
+image: contains the name of the image on docker hub, in this case its postgres. 16 is what they call a tag, 
+    which is the version of postgres, you can go to the images tag section to list all the available versions.
+
+ports: maps container port to host port, in our case we are using the same port for the container and the 
+    host(5432). The port to the left is the host port and port to the right is the containers port.
+
+environment: docker images can contain environment variables which are used to define and create certain 
+    elements, in this case the variables are used to create a postgres user and define the data location.
+
+volumes: these are used to keep data persistent by storing the data​ in the host machine and linking it with the 
+    container. 
+    There are 2 type of volumes that you can create, you can specify the location on your host machine or let 
+        docker create the volume for you, in this case docker is used to create the volume called odoo-db-data, 
+        this volume is linked to a path within the container where the postgres data is stored 
+        (/var/lib/postgresql/data). When creating a volume using docker it needs to be defined, which is done 
+        at the very bottom of our yml file.
+
+odoo18:
+    image: odoo:18.0
+    depends_on:
+      - db
+    ports:
+      - "8068:8069"
+    volumes:
+      - odoo-web-data:/var/lib/odoo
+      - ./config:/etc/odoo
+      - ./addons:/mnt/extra-addons
+    command: odoo -d odoo_db -i base --db_user=odoo --db_password=odoo --db_host=db
+
+odoo18: is the container name.
+
+image: the docker hub image name and tag(version number).
+
+depends_on: makes this container dependent on another container, in this case the db container must be first 
+    initialized before the odoo container.
+
+port: maps containers port to host port, in this case we are mapping containers port 8069 to 8068 on the host 
+    machine.
+
+volumes: here we are using both docker defined volume and our own defined volumes in the current directory such 
+    as the ./config and ./addons directories​, in the config directory we will include custom odoo settings and 
+    mapping it to the odoo config directory inside the odoo container, inside this odoo config we will include 
+    the odoo data directory and custom addons directory which we mapped with our odoo-web-data and 
+    ./addons volumes (odoo config file explained further bellow).
+
+command: this allows us to run commands inside the container, this particular command ​uses the postgres user to 
+    create odoo_db database, the -i base flag is used to initialize the data base and must be removed after 
+    running it once, otherwise the database will be recreated and data will be lost.

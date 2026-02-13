@@ -1,0 +1,49 @@
+
+
+                            NANO
+ctrl + o --> save a file
+ctrl + x --> To exit from terminal
+
+w
+    sudo nano -w /etc/apachhe.conf
+To Search
+    ctrl + w -->  for Search
+    alt + w --> continue the search for same word.
+
+To Replace 
+    ctrl + w & then ctrl + R --> For Single
+    ctrl + c --> cancel
+
+To edit
+    alt + a --> select
+    alt + c --> copy the selected word.
+    ctrl + k --> To cut 
+    ctrl + u --> Paste the text.
+
+                            Tmux
+To Get list of all Commands
+    ctrl+b
+
+To create new named session
+    tmux new -s session_name
+
+Minimize/detaching from session
+    ctrl+bd
+
+Re-attaching to tmux session
+    tmux ls --> list
+    tmux a -t session_name
+
+To attached session
+    tmux attach-session -t session_name
+    tmux a -t session_name
+
+Stop tmux server/killing session
+    tmux kill-server
+
+To Check running session
+    tmux list -sessions
+    tmux ls 
+
+To change detached session(Swap session)
+    tmux switch-client -t "session number"

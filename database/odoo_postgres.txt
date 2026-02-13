@@ -25,6 +25,7 @@ Permission DATABASE to system name/user system.name
 
 create role user_name/system_user_name with superuser login;
 ALTER USER user_name CREATEDB;
+ALTER USER user_name WITH SUPERUSER;
 Update Password of User
     ALTER USER user_name WITH PASSWORD 'new_password';
 
@@ -64,6 +65,9 @@ Update on specific DATABASE
     update username set password = 'password' where id = 2;
     update ir_cron set active = 'value';
 
+To Know the size of the DATABASE
+    select pg_size_pretty(pg_database_size('db_name'));
+
 To Run odoo
     ./odoo-bin -c file_name.conf --save
     ./odoo-bin -c file_name.conf --xmlrpc-port=8018 --save
@@ -74,3 +78,6 @@ To Update Odoo Module
 odoo19
     python odoo-bin -c basic19.conf -p 8019 --save #windows
     python odoo-bin -c basic19.conf --http-port=8019 --save #windows
+
+windows through postgres know your installed path in our system.
+    show data_directory;

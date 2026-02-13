@@ -299,21 +299,26 @@
 
 @api.model --> This decorator will convert old API calls to decorated function to new API signature.
     It allow to be polite when migrating code.
+    @api.model --> No specific record # This method is called on the model, not on a specific recordset.
+    @api.model_create_multi --> Overriding create()
 
 @api.depends('value') --> When a compute function is dependent on another record, then we have to use this 
     depends decorator.
     This decorator will be called when some changes happens in the specified fields.
+    @api.depends --> Computed fields
     Example:
         @api.depends('value', 'value2')
         def _compute_(self):
 
 @api.onchange('value') --> is triggered only when one of the given attributes changes its value.
+    @api.onchange --> UI field changes
     @api.onchange('value')
     def _onchange_(self):
 
 @api.constrains('value1', 'value2') --> to check condition on create & update a record.
     1. are used in python code or we called python Constraints.
     2. When you need to validate some data before to be called create, write & unlink.
+    @api.constrains --> Validation rules
 
 # automated actions
     Sending emails: Automatically send emails to customers or employees based on specific events, such as order 
