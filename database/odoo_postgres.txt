@@ -68,6 +68,8 @@ Update on specific DATABASE
 To Know the size of the DATABASE
     select pg_size_pretty(pg_database_size('db_name'));
 
+SHOW timezone;
+
 To Run odoo
     ./odoo-bin -c file_name.conf --save
     ./odoo-bin -c file_name.conf --xmlrpc-port=8018 --save

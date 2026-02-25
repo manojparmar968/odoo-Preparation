@@ -1,0 +1,60 @@
+user Based (all steps performed in odoo)
+    Name --> name of the email server
+    FROM Filtering --> enter email id that are going to used as outgoing email server
+    Authenticate with -->   👉 Username 
+                            SSL Certificate
+                            Command Line Interface
+                            Gmail OAuth Authentication
+                            Outlook OAuth Authentication
+    Connection Encryption -->   None
+                                👉 TLS (STARTTLS), encryption and validation
+                                TLS (STARTTLS), encryption only
+                                SSL/TLS, encryption and validation
+                                SSL/TLS, encryption only
+    SMTP Server --> smtp.gmail.com
+    SMTP Port --> 25
+    Username --> enter email id that are going to used as outgoing email server
+    Password --> here you have to pass the app password that you will create in gmail app
+                    1. go to gmail settings
+                    2. search for APP Password
+                    3. create a app 
+                    4. then copy the password that is provided by gmail app and paste in your outgoing 
+                        server password and then test the connection.
+
+Gmail OAuth Authentication
+    Steps Performed on gmail
+        https://www.odoo.com/documentation/18.0/applications/general/email_communication/google_oauth.html
+        1. https://www.odoo.com/documentation/19.0/applications/general/email_communication/google_oauth.html
+            A. https://console.cloud.google.com/apis/dashboard
+            B. create New Project
+            c. left side click 3 lines and go to API & SERVICES
+            D. go to OAuth consent screen
+            E. click on get started, enter APP Name, email id and create app.
+            F. Create OAuth client 
+                1. select web application
+                2. redirect url web to pass 
+                    EG. http://localhost:8019/ + google_gmail/confirm ==> http://localhost:8019/google_gmail/confirm
+                3. save
+                4. copy client --> I
+                5. copy client -> S ==> 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PARMAR968
+                6. click on AUdiance and Publish the APP.
+        2.  Go to odoo setting & go to Use a Gmail Server 
+            A. ID --> client ID
+            B. Secret --> client Secret
+        3. Outgoing Mail Servers
+            Name --> name of the email server (Gmail OAuth Authentication)
+            FROM Filtering --> enter email id that are going to used as outgoing email server
+            Authenticate with -->   Username 
+                                    SSL Certificate
+                                    Command Line Interface
+                                👉 Gmail OAuth Authentication
+                                    Outlook OAuth Authentication
+            Connection Encryption -->   None
+                                        TLS (STARTTLS), encryption and validation
+                                    👉 TLS (STARTTLS), encryption only
+                                        SSL/TLS, encryption and validation
+                                        SSL/TLS, encryption only
+            SMTP Server --> smtp.gmail.com
+            SMTP Port --> 587
+            Username --> enter email id that are going to used as outgoing email server
+            👉 connect your gamil account ==> Gmail Token Valid.

@@ -300,7 +300,9 @@
 @api.model --> This decorator will convert old API calls to decorated function to new API signature.
     It allow to be polite when migrating code.
     @api.model --> No specific record # This method is called on the model, not on a specific recordset.
+        @api.model(Decorator)---> dict(Argument Type)
     @api.model_create_multi --> Overriding create()
+        @api.model_create_multi(Decorator)---> list of dict(Argument Type)
 
 @api.depends('value') --> When a compute function is dependent on another record, then we have to use this 
     depends decorator.
