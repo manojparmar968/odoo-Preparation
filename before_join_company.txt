@@ -23,7 +23,21 @@ WOrking ON IT --> Pending state
 Odoo Certification
 
 
+Bussiness
+1. Partner
+2. exesting Team
+    1. sales Target
+    2. Operations 
+    3. Finance & system
+    4. vendor,Purchase,Partnerships
+    5. Marketing
 
+Bussiness Partnerships
+1. A-> 12hrs, B-> 6hrs => Profit phir bhe 50-50 kyu ?
+2. 10L Profit A-> invest , B-> split => to agge kya
+3. 2Y B -> need 50L what about bussiness ?
+4. agar agge ja k nhi bani , to process kya hoga
+5. Agar loss hua to , how will be divided 
 
 
 Return of investment(ROI) = (Net Profit/cost of investment)*100

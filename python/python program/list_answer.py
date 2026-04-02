@@ -521,3 +521,19 @@ for i, ch in enumerate(s):
         max_len = i - start + 1
         longest = s[start:i+1]
 print(longest,max_len)
+
+# 32. Given an list nums, rotate the array to the right by k steps, where k is non- negative number.
+a = [1,2,3,4,5] # result = [4,5,1,2,3]
+k = 2
+
+k = k % len(a)
+r = a[-k:] + a[:-k]
+
+# 33. remove duplicates from sorted list.
+l = [5,5,7,8,8,9,9,10,10]
+n =[]
+
+for i in l:
+    if i not in n:
+        n.append(i)
+print(n)

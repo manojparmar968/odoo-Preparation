@@ -44,6 +44,12 @@
     4.Client Error => 4**
     5.Server Error => 5**
 
+# API taking too long time
+    1. Browser hit -> Frontend issue
+    2. PostMan hit -> Backend issue
+    3. Latency -> Request from browser to server time taking.
+    Note-> APM tool is used for which part is taking too long time it is server layer or DB layer code.
+
 1. Pagination It is wrong to send 10,0000 records at a time.
     instead, break it into 50-100 items per page, so user will get quick response.
 2. (Asynchronous) Async Logging it is slow to write logs on every request.

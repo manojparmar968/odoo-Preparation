@@ -44,6 +44,14 @@
   s = "abcababbaa" # string
   Result sub string with length 'abc', 3
 
+32. Given an list nums, rotate the array to the right by k steps, where k is non- negative number.
+a = [1,2,3,4,5] # result = [4,5,1,2,3]
+k = 2
+
+33. # remove duplicates from sorted list.
+l = [5,5,7,8,8,9,9,10,10]
+
+
 15. * * * * *
     * * * *
     * * *     n = 5
