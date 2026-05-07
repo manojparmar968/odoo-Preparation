@@ -31,7 +31,8 @@
 # _name_search()
     controls how records are searched in many2one fields
     _name_search is responsible for searching the specific records by some field values in 
-    relational field.
+        relational field.
+    It returns the query object.
     def _name_search(self, name, domain=None, operator='ilike', limit=None, order=None):
         return self._search(domain, limit=limit, order=order)
         return super()._name_search(name, domain, operator, limit, order)
@@ -57,6 +58,7 @@
 
 # search_count() --> method returns the number of records or matching records in the database.
     self.env[''].search_count([])
+    It returns the integer value.
 
 # browse()
     Browse method is used to return a set of records for the ids passed as the parameter in the 
@@ -157,6 +159,27 @@
     .sorted(lambda m: (m.date, m.ref or '', m.id))
     .sorted(lambda x: x.invoice_date_due or x.date)
     .sorted('date_start', reverse=True)
+
+# read()
+    it returns list of dictionary with search() method.
+    abc = self.search([])
+    print(abc.read(fields=["name","id"], load=None))
+
+# read_group()
+    read_group() for pegenation
+
+# name_create()
+    returns the tupple.
+
+# fields_get()
+    It returns the dictionary
+
+# search_fetch()
+    This is the combination of search & fetch method.
+    The fetch method does not return anything, which is also a ORM method & it stores into a cache memory.
+    It is similar to search & read method.
+    search_fetch() method returns a recordSet.
+    search_fetch(domain, fields_list, offset, limit, order)
 
 # context
     Context is used to pass parameter across the method calls from xml to python many of odoo method change 

@@ -301,8 +301,15 @@
     It allow to be polite when migrating code.
     @api.model --> No specific record # This method is called on the model, not on a specific recordset.
         @api.model(Decorator)---> dict(Argument Type)
+        explation --> If i pass list of dict with 5 records , it will run 5 times with taking as single line 
+            record at a time.
+            if you pass a dict it will return dict.
+            if you pass list of dict it will return only dict.
     @api.model_create_multi --> Overriding create()
         @api.model_create_multi(Decorator)---> list of dict(Argument Type)
+        explation --> If i pass list of dict with 5 records , it will run single time and create a record.
+            if you pass a dict it will return dict.
+            if you pass list of dict it will return list of dict.
 
 @api.depends('value') --> When a compute function is dependent on another record, then we have to use this 
     depends decorator.
