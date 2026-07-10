@@ -1,6 +1,15 @@
 # Response Status code API
     1.Informational => 1**
-    2.Success => 2**
+    2.Success => 2** OK --> Record fetched or updated successfully.
+        201 Created --> New Record created successfully.
+        204 No Content --> Request succeeded with no response body (e.g., delete).
     3.Redirection => 3**
-    4.Client Error => 4**
-    5.Server Error => 5**
+    4.Client Error => 4** Bad Request --> Invalid JSON or malformed request.
+        401 Unauthorized --> Authentication required or failed.
+        403 Forbidden --> User does not have permission.
+        404 Not Found --> Requested record or endpoint does not exist.
+        409 Conflict --> Resource conflict (e.g., duplicate data in some APIs).
+        422 Unprocessable Content --> Validation or business logic error (invalid input, missing 
+            required field, etc.).
+    5.Server Error => 5** Internal Server Error --> Unexpected server-side exception.
+        503 Service Unavailable --> Server is temporarily unavailable.

@@ -15,6 +15,7 @@
         > ssh-rsa key add into your git account to get access.
 
 # git clone -b branchName url OR git clone --recursive (Take clone with Sub folder)
+# git clone -b branchName(18.0) --single-branch --depth = 1 url
 # git branch
 # git add .
 # git commit -m "meaning full commit message"

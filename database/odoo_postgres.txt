@@ -70,6 +70,9 @@ To Know the size of the DATABASE
 
 SHOW timezone;
 
+Add Multiple addonns in odoo
+    odoo-bin -d dbname --addons-path=folderName, folderName/inside folder1, .....
+
 To Run odoo
     ./odoo-bin -c file_name.conf --save
     ./odoo-bin -c file_name.conf --xmlrpc-port=8018 --save
