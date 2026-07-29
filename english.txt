@@ -1,0 +1,87 @@
+4.
+    4.4 BAD Vives
+        1. I am annoyed(irrated).
+        2. I am very stresssed.
+        3. I am totally fed up.
+    4.5 Recovery
+        1. I need to take medicine.
+        2. I need a massage.
+        3. I feel much better.
+5. 
+    5.1 Family & Friends
+        1. I am the eldest child.
+        2. I am the youngest child.
+        3. I do not have any brother or sister.
+    5.2 Siblings & Family
+        1. I have an older brother.
+        2. I have a younger cousion.
+        3. There are six of us in our Family.
+    5.3 Marital Status
+        1. I am not married yet.
+        2. i am already married.
+        3. I have a partner.
+    5.4 Kids & Future
+        1. I Have 2 kids.
+        2. I don't have kids yet.
+        3. My kids are still young.
+    5.5 Living situation with Family
+        1. I live with my parents.
+        2. i live with my husband's family.
+        3. I live with my in-laws.
+        4. My family is in village.
+        5. my family is back in our home town.
+        6. i live alone in the city.
+    5.6 FriendShips
+        1. These are my co-workers.
+        2. These are my colleagues.
+6. Plans & Parties
+    6.1 Making Plans
+        1. What are your plans tonight.
+        2. are you free this saturday or sunday or weekend.
+        3. Let's hangout soon.
+    6.2 Responding to Plans
+        1. I am down for that.
+        2. sorry i am busy at the moment.
+        3. i will let you know.
+    6.3 Reservations & Paying
+        1. Do we need a reservation.
+        2. Lets divide the bill between us.
+        3. Let split the bill.
+        4. Its my treat.
+        5. Put your wallet away. Its my treat today.
+    6.4 Hosting Guests
+        1. Thanks for coming.
+        2. I am so glad you could make it, thanks for coming.
+        3. Make yourself at home.
+        4. Welcome please come in & make yourself at home.
+        5. Let me show you around.
+        6. Can i get you anything.
+        7. Please let me know if i can get you anything.
+    6.5 Being a Guest
+        1. Thanks for having me.
+        2. I had such a great time, thank you so much for having me.
+        3. You have a great house.
+        4. You have a great house. I love how you have decorated the living room.
+        5. What should i bring.
+        6. Do you want me to bring something.
+    6.6 Special occasions
+        1. Happy birthday man! I hope you have an amazing day.
+        2. Happy birthday man! so, where is the party to night.
+        3. Happy anniversary to a wonderful couple.
+        4. wishing you many more.
+        5. congratulations on your promotion. You really deserved it.
+        6. You have worked so hard for this role, congratulations your promotion.
+7. Future Goals and Aspirations
+    7.1 Career Aspirations
+        1. I want to start my own bussiness.
+        2. Its always been my dream to start my own business.
+        3. I am looking for a new challenge.
+    7.2 Educational Goals
+        1. I want to take a professional course.
+    7.3 Personal Development
+        1. I want to be more fluent in english.
+        2. My goal is to be more fluent in english.
+        3. I want to learn a new skill.
+        4. I want to be more confident.
+        5. I want to be more confident so i am not nervous during presentations.
+    7.4 
