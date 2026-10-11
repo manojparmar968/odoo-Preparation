@@ -84,4 +84,24 @@
         3. I want to learn a new skill.
         4. I want to be more confident.
         5. I want to be more confident so i am not nervous during presentations.
-    7.4 
+8. Direction & Distance
+    8.1 Asking for directions
+        1. Where is the general store.
+        2. Where is the exit.
+        3. Could you tell me where the exist is.
+        4. Is there an ATM around here ?
+    8.2 Giving directions
+        1. Turn left at the junction.
+        2. You need to turn left at the intersection, right after the bank.
+        3. It's next to that building.
+        4. You've gone too far ahead. come back.
+    8.3 Asking About Distance
+        1. Is the station nearby?
+        2. is the train station is nearby or far?
+        3. is the train station within walking distance from here?
+        4. How long will it take to walk?
+        5. How long will it take to walk there from here?
+        6. Is it too far?
+        7. Is it better to drive, or is it a short enough walk?
+    8.4 Explaining Distance
+        1. 

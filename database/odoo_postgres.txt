@@ -89,3 +89,12 @@ odoo19
 
 windows through postgres know your installed path in our system.
     show data_directory;
+
+./odoo-bin -d your_database_name --clear-cache
+
+/web/login
+/web/database/selector
+web/database/manager
+
+To Hide web/database/selector
+    .conf --no-database-list
