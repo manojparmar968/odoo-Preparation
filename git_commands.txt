@@ -1,6 +1,7 @@
 # pwd --> To Know the path
 
 # Sudo apt-get install git
+# git init
 # git config --global user.name "Manoj Parmar"
 # git config --global user.email ""
 
@@ -13,6 +14,35 @@
         > Enter Password
     cat `/.ssh/id_rsa.pub
         > ssh-rsa key add into your git account to get access.
+
+# To Generate ssh-rsa key for MacBook
+    Step 1: Generate the SSH key
+        ssh-keygen -t rsa -b 4096 -C "your-email@example.com"
+    Step 2: Start the SSH agent
+        eval "$(ssh-agent -s)"
+    Step 3: Add the key to the macOS Keychain
+        ssh-add --apple-use-keychain ~/.ssh/id_rsa
+    Step 4: Configure SSH (recommended)
+        mkdir -p ~/.ssh
+        touch ~/.ssh/config
+        nano ~/.ssh/config
+            Add the following configuration:
+                Host github.com
+                    AddKeysToAgent yes
+                    UseKeychain yes
+                    IdentityFile ~/.ssh/id_rsa
+            Note:- Save the file in Nano using Ctrl + O, press Enter, and then Ctrl + X.
+            Set appropriate permissions:
+                chmod 700 ~/.ssh
+                chmod 600 ~/.ssh/config
+                chmod 600 ~/.ssh/id_rsa
+                chmod 644 ~/.ssh/id_rsa.pub
+    Step 5: Display your public SSH key
+        cat ~/.ssh/id_rsa.pub
+    Step 6: Add the key to GitHub
+        Open GitHub SSH settings --> Click New SSH key
+    Step 7: Test your SSH connection
+        ssh -T git@github.com
 
 # git clone -b branchName url OR git clone --recursive (Take clone with Sub folder)
 # git clone -b branchName(18.0) --single-branch --depth = 1 url
